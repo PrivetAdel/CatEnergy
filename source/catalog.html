@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo logo" href="index.html">
-        <img class="logo__image--picture" src="http://placehold.it/50x50" width="50" height="50" alt="Кэт энерджи">
-      </a>
-      <a class="page-header__logo logo" href="index.html">
-        <img class="logo__image--title-header" src="http://placehold.it/140x50" width="140" height="50" alt="Кэт энерджи">
+      <a class="page-header__logo logo">
+        <img class="logo__image--picture" src="img\logo-mobile.svg" width="195" height="40" alt="Кэт энерджи">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -33,7 +33,7 @@
       <h1 class="page-catalog__description">Каталог продукции</h1>
       <div class="page-catalog__list">
         <div class="page-catalog__item product">
-          <img class="product__image product__image--picture" src="http://placehold.it/140x140" width="140" height="140" alt="Cat energy pro вкус курица 500 г">
+          <img class="product__image product__image--picture" src="img/chicken-small-mobile@1x.jpg" width="140" height="140" alt="Cat energy pro вкус курица 500 г">
           <h3 class="product__description">Cat energy pro 500 г</h3>
           <table class="product__information information">
             <tr class="information__list">
@@ -52,7 +52,7 @@
           <button class="product__order button" type="button">Заказать</button>
         </div>
         <div class="page-catalog__item product">
-          <img class="product__image product__image--picture" src="http://placehold.it/140x140" width="140" height="140" alt="Cat energy pro вкус курица 1000 г">
+          <img class="product__image product__image--picture" src="img/chicken-big-mobile@1x.jpg" width="140" height="140" alt="Cat energy pro вкус курица 1000 г">
           <h3 class="product__description">Cat energy pro 1000 г</h3>
           <table class="product__information information">
             <tr class="information__list">
@@ -71,7 +71,7 @@
           <button class="product__order button" type="button">Заказать</button>
         </div>
         <div class="page-catalog__item product">
-          <img class="product__image product__image--picture" src="http://placehold.it/140x140" width="140" height="140" alt="Cat energy pro вкус рыба 500 г">
+          <img class="product__image product__image--picture" src="img/fish-small-mobile@1x.jpg" width="140" height="140" alt="Cat energy pro вкус рыба 500 г">
           <h3 class="product__description">Cat energy pro 500 г</h3>
           <table class="product__information information">
             <tr class="information__list">
@@ -90,7 +90,7 @@
           <button class="product__order button" type="button">Заказать</button>
         </div>
         <div class="page-catalog__item product">
-          <img class="product__image product__image--picture" src="http://placehold.it/140x140" width="140" height="140" alt="Cat energy pro вкус рыба 1000 г">
+          <img class="product__image product__image--picture" src="img/fish-big-mobile@1x.jpg" width="140" height="140" alt="Cat energy pro вкус рыба 1000 г">
           <h3 class="product__description">Cat energy pro 1000 г</h3>
           <table class="product__information information">
             <tr class="information__list">
@@ -109,7 +109,7 @@
           <button class="product__order button" type="button">Заказать</button>
         </div>
         <div class="page-catalog__item product">
-          <img class="product__image product__image--picture" src="http://placehold.it/140x140" width="140" height="140" alt="Cat energy slim вкус гречка 500 г">
+          <img class="product__image product__image--picture" src="img/buckwheat-small-mobile@1x.jpg" width="140" height="140" alt="Cat energy slim вкус гречка 500 г">
           <h3 class="product__description">Cat energy slim 500 г</h3>
           <table class="product__information information">
             <tr class="information__list">
@@ -128,7 +128,7 @@
           <button class="product__order button" type="button">Заказать</button>
         </div>
         <div class="page-catalog__item product">
-          <img class="product__image product__image--picture" src="http://placehold.it/140x140" width="140" height="140" alt="Cat energy slim вкус гречка 1000 г">
+          <img class="product__image product__image--picture" src="img/buckwheat-big-mobile@1x.jpg" width="140" height="140" alt="Cat energy slim вкус гречка 1000 г">
           <h3 class="product__description">Cat energy slim 1000 г</h3>
           <table class="product__information information">
             <tr class="information__list">
@@ -147,7 +147,7 @@
           <button class="product__order button" type="button">Заказать</button>
         </div>
         <div class="page-catalog__item product">
-          <img class="product__image product__image--picture" src="http://placehold.it/140x140" width="140" height="140" alt="Cat energy slim вкус рис 500 г">
+          <img class="product__image product__image--picture" src="img/rice-small-mobile@1x.jpg" width="140" height="140" alt="Cat energy slim вкус рис 500 г">
           <h3 class="product__description">Cat energy slim 500 г</h3>
           <table class="product__information information">
             <tr class="information__list">
@@ -214,37 +214,39 @@
           </table>
           <button class="additionally__order button" type="button">Заказать</button>
         </div>
-        <img class="page-catalog__picture" src="http://placehold.it/" width="280" height="290" alt="Подарок за покупки">
-        <span class="page-catalog__present">Закажите все и получите чехол для кота в подарок!</span>
+      </section>
+      <section class="page-catalog__picture">
+        <p class="page-catalog__present">Закажите все и получите чехол для кота в подарок!</p>
       </section>
     </main>
     <footer class="page-footer">
-      <section class="page-footer address">
+      <section class="page-footer__address">
         <h2 class="visually-hidden">Адрес</h2>
-        <p>Приглашаем<br> к сотрудничеству<br> дилеров!</p>
-        <p>ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</p>
-        <!--Разметить карту-->
-        <map name=""><area></map>
+        <p class="page-footer__slogan">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
+        <p class="page-footer__adds">ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</p>
       </section>
-      <a class="page-footer__logo logo">
-        <img class="logo__image--title-footer" src="http://placehold.it/140x50" width="140" height="50" alt="Кэт энерджи">
+      <img src="img/bg-map-mobile@1x.png" width="320px" height="360px" alt="Карта">
+      <a class="page-footer__logo logo-footer">
+        <img class="logo-footer__image--title-footer" src="img/logo-footer.svg" width="130" height="26" alt="Кэт энерджи">
       </a>
+      <hr class="programm__decor">
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https:/vk.com/htmlacademy">Вконтакте</a>
+            <a class="social__link social__link--vkontakte" href="https:/vk.com/htmlacademy"><img src="img/icon-vk-mobile.svg" width="23px" height="13px"><span class="visually-hidden">Вконтакте</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https:/www.instagram.com/htmlacademy">Инстаграм</a>
+            <a class="social__link social__link--instagram" href="https:/www.instagram.com/htmlacademy"><img src="img/icon-insta-mobile.svg" width="20px" height="20px"><span class="visually-hidden">Инстаграм</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https:/www.facebook.com/htmlacademy">Фейсбук</a>
+            <a class="social__link social__link--facebook" href="https:/www.facebook.com/htmlacademy"><img src="img/icon-fb-mobile.svg" width="13px" height="23px"><span class="visually-hidden">Фейсбук<span></a>
           </li>
         </ul>
       </div>
+      <hr class="programm__decor">
       <div class="page-footer__copyright copyright">
         <a class="copyright__link--text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="copyright__link--logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
+        <a class="copyright__link--logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" height="35px" width="30px"></a>
       </div>
     </footer>
   </body>
