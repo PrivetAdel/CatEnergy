@@ -10,6 +10,19 @@
   font-weight: 400;
   padding: 20px;
   margin: 0;
-  border: 1px solid #cdcdcd;
+  border: 1px solid @grey;
   border-radius: 5px;
+}
+
+@media (min-width: @tablet-width) {
+  .results__item {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .results__item--bold {
+    font-size: 30px;
+    line-height: 37.02px;
+    text-transform: uppercase;
+  }
 }

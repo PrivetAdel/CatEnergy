@@ -7,6 +7,12 @@
   margin: 0;
 }
 
+.example__toggles {
+  display: flex;
+  margin: 0 auto;
+  width: 280px;
+}
+
 .example__description {
   padding: 0 20px;
   width: 270px;
@@ -20,4 +26,38 @@
   text-align: center;
   padding: 20px 67px;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    padding-bottom: 70px;
+  }
+
+  .example__description {
+    font-size: 16px;
+    line-height: 24px;
+    width: 690px;
+    padding: 0 0 55px 0;
+  }
+
+  .example__cost {
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    width: 192px;
+    padding: 0;
+  }
+
+  .example__picture {
+    padding-top: 75px;
+    margin: 0 auto;
+  }
+
+  .example__toggles {
+    display: flex;
+    margin: 0 auto;
+  }
 }

@@ -11,3 +11,26 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media (min-width: @tablet-width) {
+  .information {
+    width: 250px;
+    margin: 0 auto;
+    padding-bottom: 33px;
+  }
+
+  .information__list {
+    border-bottom: 1px solid @grey;
+  }
+
+  .information__item {
+    font-size: 16px;
+    padding: 10px 0 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .information {
+    width: 170px;
+  }
+}

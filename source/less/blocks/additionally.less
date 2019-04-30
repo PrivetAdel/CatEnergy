@@ -1,6 +1,6 @@
 .additionally {
   padding-bottom: 20px;
-  border-top: 1px solid #ededed;
+  border-top: 1px solid @grey;
 }
 
 .additionally h3 {
@@ -14,4 +14,35 @@
   display: flex;
   justify-content: space-between;
   width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .additionally {
+    width: 708px;
+    height: 140px;
+    border: 1px solid @grey;
+    background-color: @white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-collapse: collapse;
+  }
+
+  .additionally h3 {
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin: 28px 0 0 40px;
+  }
+
+  .additionally__order {
+    width: 633px;
+    margin: 0 auto;
+  }
+
+  .additionally__information {
+    margin: 30px 40px 0 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
