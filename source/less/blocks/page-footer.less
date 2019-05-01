@@ -1,10 +1,11 @@
 .page-footer {
   width: 320px;
-  background-color: #f2f2f2;
+  background-color: @lightgrey;
 }
 
 .page-footer__address {
-  background-color: #ffffff;
+  background-color: @white;
+  height: 200px;
 }
 
 .page-footer__slogan {
@@ -28,5 +29,75 @@
 .page-footer__social,
 .page-footer__logo,
 .page-footer__copyright {
-  background-color: #f2f2f2;
+  background-color: @lightgrey;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 70px;
+    background-color: @white;
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .page-footer__address {
+    display: flex;
+    justify-content: space-around;
+    margin: 60px auto 0;
+    padding: 0 70px;
+    width: 708px;
+  }
+
+  .page-footer__slogan {
+    width: 315px;
+    padding: 70px 0 0;
+    margin: 0;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .page-footer__adds {
+    width: 315px;
+    padding: 65px 0 0;
+    margin: 0;
+    font-size: 16px;
+    text-align: right;
+  }
+
+  .page-footer__maps {
+    width: 768px;
+    height: 400px;
+  }
+
+  .page-footer__wrap {
+    width: 786px;
+    display: flex;
+    background-color: @lightgrey;
+    padding: 0 30px;
+  }
+
+  .page-footer__logo {
+    margin: 58px 0 0;
+  }
+
+  .page-footer__social {
+    padding: 0 30px 0 30px;
+    margin: 58px 0 0;
+    display: flex;
+    width: 325px;
+  }
+
+  .page-footer__copyright {
+    padding: 0;
+    margin: 58px 0 0;
+    width: 135px;
+  }
+
+  .page-footer__address--catalog {
+    height: 200px;
+    width: 768px;
+    background-color: @lightgrey;
+  }
 }

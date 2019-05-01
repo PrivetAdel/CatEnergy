@@ -9,9 +9,10 @@
   display: block;
   width: 85px;
   height: 15px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid @grey;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: @white;
+  margin: 0 20px 0 20px;
 }
 
 .slider__circle {
@@ -21,5 +22,34 @@
   height: 6px;
   width: 36px;
   border-radius: 5px;
-  background-color: #68b738;
+  background-color: @green;
+}
+
+@media (min-width: @tablet-width) {
+  .slider__toggle {
+    font-size: 20px;
+  }
+
+  .slider__capsule {
+    border: none;
+    width: 440px;
+    height: 6px;
+    background-color: @grey;
+  }
+
+  .slider__circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid @grey;
+    background-color: @white;
+  }
+
+  .slider__circle::before {
+    content: '';
+    background-color: @green;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
 }

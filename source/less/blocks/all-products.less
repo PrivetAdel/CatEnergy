@@ -16,4 +16,36 @@
 .all-products__description::before {
   content: url("../img/icon-plus-mobile.svg");
   margin: 20px;
+  width: 30px;
+  height: 30px;
+  color: @lightgrey;
+}
+
+.all-products__show {
+  background-color: @lightgrey;
+  color: @grey;
+}
+
+@media (min-width: @tablet-width) {
+  .all-products__description{
+    font-size: 20px;
+    margin: 165px auto 0;
+    width: 200px;
+  }
+
+  .all-products__slogan {
+    font-size: 16px;
+    margin: 28px auto 0;
+    width: 200px;
+  }
+
+  .all-products__show {
+    margin: 85px auto 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .all-products__show {
+    width: 170px;
+  }
 }

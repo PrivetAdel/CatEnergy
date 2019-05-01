@@ -4,8 +4,24 @@
 }
 
 .site-list__item {
-  border-top: 1px solid #e6e6e6;
-  width: 320px;
+  border-top: 1px solid @grey;
+  min-width: 320px;
   text-align: center;
   padding: 25px 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__item {
+    border: none;
+    padding: 0;
+    min-width: 90px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    border: none;
+    padding: 0;
+    min-width: 120px;
+  }
 }

@@ -7,18 +7,24 @@
   margin: 0;
 }
 
+.advantages__item {
+  display: flex;
+}
+
 .advantages__list {
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .advantages__description {
-  width: 195px;
-  padding: 5px 0 5px 80px;
+  width: 200px;
+  padding: 10px 0 0 20px;
 }
 
 .advantages__item--sheet {
   background-image: url(../img/advantage-leaf@1x.png);
-  background-color: #68b738;
+  background-color: @green;
   width: 60px;
   height: 60px;
   margin: 20px 0;
@@ -29,7 +35,7 @@
 
 .advantages__item--powder {
   background-image: url(../img/advantage-powder@1x.png);
-  background-color: #68b738;
+  background-color: @green;
   width: 60px;
   height: 60px;
   margin: 20px 0;
@@ -40,7 +46,7 @@
 
 .advantages__item--cutlery{
   background-image: url(../img/advantage-dining@1x.png);
-  background-color: #68b738;
+  background-color: @green;
   width: 60px;
   height: 60px;
   margin: 20px 0;
@@ -51,11 +57,73 @@
 
 .advantages__item--scales{
   background-image: url(../img/advantage-clock@1x.png);
-  background-color: #68b738;
+  background-color: @green;
   width: 60px;
   height: 60px;
   margin: 20px 0;
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__title {
+    font-size: 60px;
+    text-align: left;
+    width: 708px;
+    padding: 0 0 65px 0;
+  }
+
+  .advantages__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 708px;
+    padding: 0;
+  }
+
+  .advantages__item {
+    width: 334px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 135px;
+  }
+
+  .advantages__item--sheet,
+  .advantages__item--powder,
+  .advantages__item--cutlery,
+  .advantages__item--scales {
+    width: 80px;
+    height: 80px;
+    order: 0;
+  }
+
+  .advantages__description {
+    font-size: 16px;
+    line-height: 24px;
+    width: 230px;
+    padding: 0;
+    order: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1300px;
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  .advantages__item {
+    width: 245px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .advantages__title {
+    width: 1220px;
+  }
 }

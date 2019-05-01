@@ -1,6 +1,6 @@
 .programm__item {
   width: 280px;
-  background-color: #f2f2f2;
+  background-color: @lightgrey;
 }
 
 .programm__description {
@@ -18,7 +18,7 @@
 }
 
 .programm__decor {
-  color: #d9d9d9;
+  color: @grey;
   size: 1px;
   text-align: center;
   width: 240px;
@@ -40,7 +40,7 @@
 }
 
 .programm__item--slim {
-  background-color: #68b738;
+  background-color: @green;
   margin: 20px;
   float: left;
   border-radius: 150px;
@@ -49,7 +49,7 @@
 }
 
 .programm__item--pro {
-  background-color: #68b738;
+  background-color: @green;
   margin: 20px;
   float: left;
   border-radius: 150px;
@@ -60,4 +60,107 @@
 .programm__button::after {
   content: url("../img/icon-right-arrow-long.svg");
   margin-left: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .programm__choice {
+    position: absolute;
+    top: 370px;
+  }
+
+  .programm__item {
+    width: 708px;
+    margin-bottom: 30px;
+    display: flex;
+    padding-left: 50px;
+    padding-top: 82px;
+    flex-wrap: wrap;
+  }
+
+  .programm__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .programm__decor {
+    size: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .programm__item--slim {
+    order: 1;
+    width: 205px;
+    height: 205px;
+  }
+
+  .programm__item--pro {
+    order: 1;
+    width: 205px;
+    height: 205px;
+  }
+
+  .programm__title {
+    width: 375px;
+    padding: 0 0 25px 0;
+    margin: 0;
+    text-align: left;
+    font-size: 36px;
+  }
+
+  .programm__description {
+    width: 375px;
+    padding: 0 0 60px 0;
+    margin: 0;
+    order: 2;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .programm__button {
+    width: 375px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+    order: 3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programm__list {
+    flex-direction: row;
+    width: 1300px;
+  }
+
+  .programm__item {
+    width: 570px;
+    margin-bottom: 30px;
+    display: flex;
+    padding-left: 50px;
+    padding-top: 82px;
+    flex-wrap: wrap;
+    margin: 0 40px;
+  }
+
+  .programm__item--slim {
+    width: 105px;
+    height: 105px;
+    order: 0;
+  }
+
+  .programm__item--pro {
+    order: 0;
+    width: 105px;
+    height: 105px;
+  }
+
+  .programm__choice {
+    position: absolute;
+    top: 455px;
+  }
 }

@@ -1,6 +1,6 @@
 .product {
   padding: 20px;
-  border-top: 1px solid #ededed;
+  border-top: 1px solid @grey;
 }
 
 .product__image {
@@ -16,4 +16,33 @@
   text-transform: uppercase;
   float: right;
   margin-right: 60px;
+}
+
+@media (min-width: @tablet-width) {
+  .product {
+    border: none;
+    padding: 0;
+  }
+
+  .product__description {
+    margin: 0 auto;
+    width: 140px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .product__image {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .product__order {
+    margin: 0 auto 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product__order {
+    width: 170px;
+  }
 }
