@@ -1,11 +1,17 @@
 .page-footer {
   width: 320px;
   background-color: @lightgrey;
+  margin: 0 auto;
 }
 
 .page-footer__address {
   background-color: @white;
-  height: 200px;
+  height: 106px;
+}
+
+.page-footer__address img {
+  width: 320px;
+  height: 360px;
 }
 
 .page-footer__slogan {
@@ -24,6 +30,17 @@
   line-height: 20px;
   float: right;
   padding-right: 20px;
+  margin: 20px 4px;
+}
+
+.page-footer__wrap {
+  padding: 36px 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__logo {
+  margin: 0 auto 15px;
 }
 
 .page-footer__social,
@@ -32,11 +49,21 @@
   background-color: @lightgrey;
 }
 
+.page-footer__social {
+  margin: 5px 0;
+}
+
+.page-footer__decor {
+  color: @grey;
+  size: 1px;
+  margin: 10px 0 10px;
+}
+
 @media (min-width: @tablet-width) {
   .page-footer {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 70px;
+    padding-top: 67px;
     background-color: @white;
     width: 768px;
     margin: 0 auto;
@@ -45,14 +72,14 @@
   .page-footer__address {
     display: flex;
     justify-content: space-around;
-    margin: 60px auto 0;
+    margin: 60px auto 97px;
     padding: 0 70px;
     width: 708px;
   }
 
   .page-footer__slogan {
     width: 315px;
-    padding: 70px 0 0;
+    padding: 68px 0 0;
     margin: 0;
     font-size: 20px;
     line-height: 25px;
@@ -60,8 +87,8 @@
 
   .page-footer__adds {
     width: 315px;
-    padding: 65px 0 0;
-    margin: 0;
+    padding: 66px 0 0;
+    margin: 0 0 0 -7px;
     font-size: 16px;
     text-align: right;
   }
@@ -75,24 +102,27 @@
     width: 786px;
     display: flex;
     background-color: @lightgrey;
-    padding: 0 30px;
+    padding: 0 30px 42px;
+    flex-direction: row;
+  }
+
+  .page-footer__wrap hr {
+    display: none;
   }
 
   .page-footer__logo {
-    margin: 58px 0 0;
+    margin: 60px 0 0;
   }
 
   .page-footer__social {
     padding: 0 30px 0 30px;
     margin: 58px 0 0;
     display: flex;
-    width: 325px;
   }
 
   .page-footer__copyright {
     padding: 0;
-    margin: 58px 0 0;
-    width: 135px;
+    margin: 45px 41px 0;
   }
 
   .page-footer__address--catalog {

@@ -19,7 +19,8 @@
 
 .advantages__description {
   width: 200px;
-  padding: 10px 0 0 20px;
+  padding: 0px 0 0 20px;
+  margin: 11px 0 0;
 }
 
 .advantages__item--sheet {
@@ -27,7 +28,7 @@
   background-color: @green;
   width: 60px;
   height: 60px;
-  margin: 20px 0;
+  margin: 9px 0;
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -38,7 +39,7 @@
   background-color: @green;
   width: 60px;
   height: 60px;
-  margin: 20px 0;
+  margin: 10px 0;
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -49,7 +50,7 @@
   background-color: @green;
   width: 60px;
   height: 60px;
-  margin: 20px 0;
+  margin: 10px 0;
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -60,7 +61,7 @@
   background-color: @green;
   width: 60px;
   height: 60px;
-  margin: 20px 0;
+  margin: 10px 0 0;
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -79,14 +80,22 @@
     flex-wrap: wrap;
     width: 708px;
     padding: 0;
+    justify-content: space-between;
+  }
+
+  .advantages__item:nth-child(3),
+  .advantages__item:nth-child(4) {
+    padding-bottom: 82px;
+    margin-bottom: 0;
   }
 
   .advantages__item {
-    width: 334px;
+    width: 324px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding-bottom: 135px;
+    padding-bottom: 98px;
+    margin: 7px 0;
   }
 
   .advantages__item--sheet,
@@ -95,15 +104,66 @@
   .advantages__item--scales {
     width: 80px;
     height: 80px;
-    order: 0;
+    margin: 0;
+  }
+
+  .advantages__item--sheet::after {
+    content: '1';
+    color: @lightgrey;
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 281.07px;
+    line-height: 281.07px;
+    font-weight: 400;
+    position: relative;
+    top: -38px;
+    left: 120px;
+    opacity: 0.5;
+  }
+
+  .advantages__item--powder::after {
+    content: '2';
+    color: @lightgrey;
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 281.07px;
+    line-height: 281.07px;
+    font-weight: 400;
+    position: relative;
+    top: -38px;
+    left: 112px;
+    opacity: 0.5;
+  }
+
+  .advantages__item--cutlery::after {
+    content: '3';
+    color: @lightgrey;
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 281.07px;
+    line-height: 281.07px;
+    font-weight: 400;
+    position: relative;
+    top: -38px;
+    left: 112px;
+    opacity: 0.5;
+  }
+
+  .advantages__item--scales::after {
+    content: '4';
+    color: @lightgrey;
+    font-family: "Oswald", Arial, sans-serif;
+    font-size: 281.07px;
+    line-height: 281.07px;
+    font-weight: 400;
+    position: relative;
+    top: -38px;
+    left: 112px;
+    opacity: 0.5;
   }
 
   .advantages__description {
     font-size: 16px;
     line-height: 24px;
-    width: 230px;
-    padding: 0;
-    order: 1;
+    width: 245px;
+    padding: 21px 0;
   }
 }
 

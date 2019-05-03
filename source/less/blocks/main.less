@@ -1,3 +1,8 @@
+.main {
+  margin: 0 auto 9px;
+  width: 320px;
+}
+
 .main__introduction {
   background-image: url("../img/index-background-mobile@1x.jpg");
   width: 320px;
@@ -5,6 +10,7 @@
   background-repeat: no-repeat;
   background-position-x: center;
   background-color: @green;
+  margin-bottom: 10px;
 }
 
 .main__description {
@@ -15,7 +21,7 @@
   font-weight: 400;
   margin: 0;
   text-align: center;
-  padding: 30px 0 20px;
+  padding: 28px 0 20px;
 }
 
 .main__slogan {
@@ -26,68 +32,37 @@
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-}
-
-.main-nav__toggle {
-  background-image: url("../img/icon-close.svg");
-  float: right;
-  background-repeat: no-repeat;
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin: 23px 20px;
-}
-
-.main-nav__wrapper {
-  padding-top: 65px;
+  margin: 0 auto;
+  padding: 6px 0 0;
 }
 
 .main__picture {
-  background-position-x: center;
+  padding: 27px 20px;
 }
 
 .main__programm {
-  padding-top: 135px;
+  padding-top: 126px;
   margin: 0 20px;
 }
 
 .main__advantages {
   width: 320px;
   min-height: 400px;
+  margin: -25px auto 41px;
 }
 
 .main__example {
   width: 320px;
   background-color: @lightgrey;
+  padding: 0 0 37px 0;
 }
 
 @media (min-width: @tablet-width) {
   .main {
+    min-width: 768px;
     display: flex;
-    min-width: 490px;
     margin: 0 auto;
     flex-direction: column;
-  }
-
-  .main-nav {
-    min-width: 490px;
-    display: flex;
-  }
-
-  .main-nav__wrapper {
-    padding: 48px 0 0 0;
-  }
-
-  .main-nav__list {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 470px;
-    justify-content: space-between;
-  }
-
-  .main-nav__toggle {
-    padding: 0;
-    width: 0;
   }
 
   .main__introduction {
@@ -95,30 +70,33 @@
     display: flex;
     background: none;
     flex-direction: column;
-    margin: 0 auto 20px;
+    margin: 0 auto 70px;
     min-height: 820px;
   }
 
   .main__description {
     color: @black;
     text-align: left;
-    margin-top: 62px;
-    width: 420px;
+    margin: 52px 0 0 86px;
     font-size: 60px;
     line-height: 60px;
+    width: 487px;
   }
 
   .main__slogan {
     color: @black;
     text-align: left;
-    margin-top: 17px;
+    margin-top: 14px;
     font-size: 20px;
     line-height: 20px;
+    width: 487px;
+    margin-left: 88px;
   }
 
   .main__picture {
-    width: 709px;
+    width: 708px;
     height: 609px;
+    padding: 0;
   }
 
   .main__programm {
@@ -133,14 +111,14 @@
     display: flex;
     margin: 0 auto;
     flex-wrap: wrap;
-    border-bottom: 1px solid @grey;
+    border-bottom: 1px solid @lightgrey;
   }
 
   .main__example {
     width: 708px;
     display: flex;
     margin: 0 auto;
-    flex-wrap: wrap;
+    flex-direction: column;
     background-color: @white;
     padding-top: 50px;
   }
@@ -157,28 +135,11 @@
     margin: 0 auto;
   }
 
-  .main-nav {
-    display: flex;
-    padding: 54px 0 0;
-  }
-
   .main__introduction {
     display: flex;
     margin: 0 auto;
     width: 1300px;
     flex-wrap: wrap;
-  }
-
-  .main-nav__wrapper {
-    min-width: 490px;
-    padding: 0;
-  }
-
-  .main-nav__list {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 490px;
-    justify-content: space-between;
   }
 
   .main__programm {

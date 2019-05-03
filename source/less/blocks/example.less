@@ -3,19 +3,20 @@
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
-  padding: 20px;
+  padding: 19px 20px;
   margin: 0;
 }
 
 .example__toggles {
   display: flex;
-  margin: 0 auto;
+  margin: 0 64px;
   width: 280px;
 }
 
 .example__description {
   padding: 0 20px;
   width: 270px;
+  margin: 3px 0;
 }
 
 .example__cost {
@@ -24,8 +25,32 @@
   line-height: 20px;
   font-weight: 400;
   text-align: center;
-  padding: 20px 67px;
-  margin: 0;
+  padding: 0 66px;
+  text-transform: uppercase;
+  margin: 13px 0px 0 0;
+}
+
+.example__results {
+  display: flex;
+  margin: 0 auto 12px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example__picture {
+  margin: 34px 0 0;
+  display: block;
+  height: 270px;
+}
+
+.example__picture img {
+  width: 320px;
+  height: 240px;
+}
+
+.example__picture li:last-child {
+  position: relative;
+  top: -240px;
 }
 
 @media (min-width: @tablet-width) {
@@ -33,31 +58,65 @@
     font-size: 60px;
     line-height: 60px;
     text-align: left;
-    padding-bottom: 70px;
+    padding: 0 0 70px 0;
+    margin: -8px 0;
   }
 
   .example__description {
     font-size: 16px;
     line-height: 24px;
     width: 690px;
-    padding: 0 0 55px 0;
+    padding: 0 0 49px 0;
   }
 
   .example__cost {
     font-size: 20px;
-    line-height: 20px;
-    text-transform: uppercase;
+    line-height: 28px;
     width: 192px;
     padding: 0;
+    position: relative;
+    top: -5px;
+    left: -1px;
+    text-align: right;
+  }
+
+  .example__results {
+    margin: 0;
   }
 
   .example__picture {
-    padding-top: 75px;
-    margin: 0 auto;
+    padding-top: 91px;
+    margin: 0 auto 165px;
+  }
+
+/*
+  .example__picture li::after {
+    content: '';
+    background-color: @lightgrey;
+    height: 460px;
+    width: 768px;
+    position: absolute;
+    top: 10px;
+    display: block;
+  }
+*/
+
+  .example__picture img {
+    width: 708px;
+    height: auto;
+  }
+
+  .example__picture li:last-child {
+    position: relative;
+    top: -525px;
   }
 
   .example__toggles {
     display: flex;
-    margin: 0 auto;
+    margin: -3px 0 0 58px;
+    position: relative;
+    top: 99px;
+    left: 10px;
+    width: 708px;
   }
 }

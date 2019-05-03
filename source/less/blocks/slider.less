@@ -3,24 +3,27 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 .slider__capsule {
   display: block;
-  width: 85px;
-  height: 15px;
+  width: 80px;
+  height: 13px;
   border: 1px solid @grey;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: @white;
-  margin: 0 20px 0 20px;
+  margin: 0 18px 0 20px;
+  position: relative;
+  top: 4px;
 }
 
 .slider__circle {
   margin-top: 5px;
-  margin-left: 5px;
+  margin-left: 4px;
   position: absolute;
   height: 6px;
-  width: 36px;
+  width: 33px;
   border-radius: 5px;
   background-color: @green;
 }
@@ -28,13 +31,16 @@
 @media (min-width: @tablet-width) {
   .slider__toggle {
     font-size: 20px;
+    padding-bottom: 6px;
+    border-bottom: 1px dotted @grey;
   }
 
   .slider__capsule {
     border: none;
-    width: 440px;
+    width: 428px;
     height: 6px;
     background-color: @grey;
+    margin: 3px 22px 0 24px;
   }
 
   .slider__circle {
@@ -43,6 +49,9 @@
     border-radius: 50%;
     border: 1px solid @grey;
     background-color: @white;
+    position: relative;
+    top: -17px;
+    left: 195px;
   }
 
   .slider__circle::before {
@@ -51,5 +60,8 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 11px;
   }
 }
