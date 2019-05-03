@@ -1,10 +1,22 @@
-.programm__item {
-  width: 280px;
-  background-color: @lightgrey;
+.programm__list {
+  margin: 21px 0;
 }
 
-.programm__description {
-  padding: 10px 30px 25px;
+.programm__item {
+  width: 238px;
+  background-color: @lightgrey;
+  padding: 21px 21px 18px 21px;
+  margin-bottom: 20px;
+}
+
+.programm__description--slim {
+  padding: 0;
+  margin: 12px -1px 22px;
+}
+
+.programm__description--pro {
+  padding: 0;
+  margin: 34px -1px 22px;
 }
 
 .programm__title {
@@ -14,19 +26,23 @@
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  padding: 40px 10px 10px;
+}
+
+.programm__title--slim {
+  margin: -40px;
+  padding: 0 0 0 12px;
+}
+
+.programm__title--pro {
+  margin: -42px;
+  padding: 0 0 0 38px;
 }
 
 .programm__decor {
   color: @grey;
   size: 1px;
-  text-align: center;
   width: 240px;
-  margin: 0 20px 20px;
-}
-
-.programm__button {
-  height: 57px;
+  margin: 0 -2px 20px;
 }
 
 .programm__button {
@@ -35,99 +51,148 @@
   line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  text-align: center;
-  padding: 20px;
+  margin: -2px;
 }
 
-.programm__item--slim {
+.programm__title--slim::before {
+  content: '';
+  display: block;
+  position: relative;
   background-color: @green;
-  margin: 20px;
-  float: left;
   border-radius: 150px;
   width: 50px;
   height: 50px;
+  left: 29px;
+  top: 44px;
 }
 
-.programm__item--pro {
+.programm__title--slim::after {
+  content: url("../img/icon-cat-slim.svg");
+  display: block;
+  position: relative;
+  width: 35px;
+  left: 37px;
+  top: -45px;
+}
+
+.programm__title--pro::before {
+  content: '';
+  display: block;
+  position: relative;
   background-color: @green;
-  margin: 20px;
-  float: left;
   border-radius: 150px;
   width: 50px;
   height: 50px;
+  left: 5px;
+  top: 44px;
+}
+
+.programm__title--pro::after {
+  content: url("../img/icon-cat-pro.svg");
+  display: block;
+  position: relative;
+  width: 66px;
+  left: -3px;
+  top: -33px;
 }
 
 .programm__button::after {
   content: url("../img/icon-right-arrow-long.svg");
-  margin-left: 10px;
+  margin-left: 13px;
 }
 
 @media (min-width: @tablet-width) {
   .programm__choice {
     position: absolute;
-    top: 370px;
-  }
-
-  .programm__item {
-    width: 708px;
-    margin-bottom: 30px;
-    display: flex;
-    padding-left: 50px;
-    padding-top: 82px;
-    flex-wrap: wrap;
+    top: 369px;
+    left: 118px;
   }
 
   .programm__list {
     display: flex;
     flex-direction: column;
+    width: 768px;
+    margin: 0 auto 17px;
+  }
+
+  .programm__item {
+    width: 600px;
+    padding: 0 54px 60px;
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
   }
 
   .programm__decor {
-    size: 0;
-    width: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
-  }
-
-  .programm__item--slim {
-    order: 1;
-    width: 205px;
-    height: 205px;
-  }
-
-  .programm__item--pro {
-    order: 1;
-    width: 205px;
-    height: 205px;
+    display: none;
   }
 
   .programm__title {
-    width: 375px;
-    padding: 0 0 25px 0;
-    margin: 0;
+    padding: 0;
     text-align: left;
     font-size: 36px;
   }
 
-  .programm__description {
+  .programm__title--slim {
+    margin: -124px 0 0 -1px;
+  }
+
+  .programm__title--slim::before {
+    width: 200px;
+    height: 200px;
+    left: 392px;
+    top: 216px;
+  }
+
+  .programm__title--slim::after {
+    width: 139px;
+    left: 423px;
+    top: -33px;
+  }
+
+  .programm__description--slim {
     width: 375px;
-    padding: 0 0 60px 0;
-    margin: 0;
-    order: 2;
+    margin: -170px 0 0 -2px;
     text-align: left;
     font-size: 16px;
     line-height: 24px;
+    padding-bottom: 56px;
+  }
+
+  .programm__title--pro {
+    margin: -122px 0 0 -1px;
+  }
+
+  .programm__title--pro::before {
+    width: 200px;
+    height: 200px;
+    left: 396px;
+    top: 215px;
+  }
+
+  .programm__title--pro::after {
+    width: 268px;
+    left: 359px;
+    top: 22px;
+  }
+
+  .programm__description--pro {
+    width: 344px;
+    margin: -89px 0 0 -2px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 56px;
   }
 
   .programm__button {
-    width: 375px;
-    padding: 0;
-    margin: 0;
-    text-align: left;
+    margin: 0 0 0 -2px;
     font-size: 20px;
     line-height: 20px;
-    order: 3;
+  }
+
+  .programm__button::after {
+    margin-left: 24px;
   }
 }
 
