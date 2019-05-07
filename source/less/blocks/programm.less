@@ -1,5 +1,9 @@
+.programm__choice {
+  margin: 0 20px;
+}
+
 .programm__list {
-  margin: 21px 0;
+  margin: 21px 20px;
 }
 
 .programm__item {
@@ -46,12 +50,12 @@
 }
 
 .programm__button {
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald";
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  margin: -2px;
+  margin: -1px;
 }
 
 .programm__title--slim::before {
@@ -103,9 +107,9 @@
 
 @media (min-width: @tablet-width) {
   .programm__choice {
-    position: absolute;
-    top: 369px;
-    left: 118px;
+    position: relative;
+    top: -566px;
+    left: 98px;
   }
 
   .programm__list {
@@ -147,12 +151,12 @@
   .programm__title--slim::after {
     width: 139px;
     left: 423px;
-    top: -33px;
+    top: -31px;
   }
 
   .programm__description--slim {
     width: 375px;
-    margin: -170px 0 0 -2px;
+    margin: -169px 0 0 -2px;
     text-align: left;
     font-size: 16px;
     line-height: 24px;
@@ -199,33 +203,70 @@
 @media (min-width: @desktop-width) {
   .programm__list {
     flex-direction: row;
-    width: 1300px;
+    justify-content: space-between;
+    width: 1220px;
+    margin: 0 auto;
   }
 
   .programm__item {
-    width: 570px;
-    margin-bottom: 30px;
+    width: 470px;
     display: flex;
-    padding-left: 50px;
-    padding-top: 82px;
     flex-wrap: wrap;
-    margin: 0 40px;
+    margin: 0;
+    padding: 0 50px 0;
   }
 
-  .programm__item--slim {
-    width: 105px;
-    height: 105px;
-    order: 0;
+  .programm__title {
+    width: 470px;
+    margin: -24px 0 0 165px;
   }
 
-  .programm__item--pro {
-    order: 0;
-    width: 105px;
-    height: 105px;
+  .programm__title--slim::before {
+    width: 100px;
+    height: 100px;
+    left: -162px;
+    top: 70px;
+  }
+
+  .programm__title--slim::after {
+    width: 71px;
+    left: -149px;
+    top: -73px;
+  }
+
+  .programm__title--pro::before {
+    width: 100px;
+    height: 100px;
+    left: -161px;
+    top: 70px;
+  }
+
+  .programm__title--pro::after {
+    width: 133px;
+    left: -179px;
+    top: -45px;
   }
 
   .programm__choice {
     position: absolute;
     top: 455px;
+    left: 60px;
+  }
+
+  .programm__description--slim {
+    margin: -27px 0 0 2px;
+    width: 470px;
+    padding-bottom: 31px;
+  }
+
+  .programm__description--pro {
+    width: 470px;
+    margin: 16px 0 0 3px;
+    padding-bottom: 31px;
+  }
+
+  .programm__button {
+    margin: 0 0 0 2px;
+    padding-bottom: 62px;
   }
 }

@@ -41,6 +41,17 @@
   top: 13px;
 }
 
+.results__cost {
+  font-family: "Oswald";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 66px;
+  text-transform: uppercase;
+  margin: 13px 0px 0 0;
+}
+
 @media (min-width: @tablet-width) {
   .results__item {
     font-size: 14px;
@@ -68,5 +79,28 @@
     width: 160px;
     height: 70px;
     margin: 0 0 0 -151px;
+  }
+
+  .results__cost {
+    font-size: 20px;
+    line-height: 28px;
+    width: 192px;
+    padding: 0;
+    position: relative;
+    top: -5px;
+    left: -1px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .results__time {
+    margin: 0 0 0 -526px;
+  }
+
+  .results__cost {
+    left: -950px;
+    top: 115px;
+    width: 325px;
   }
 }

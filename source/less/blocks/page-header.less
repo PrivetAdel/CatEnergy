@@ -1,37 +1,23 @@
 .page-header {
-  width: 320px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald";
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
   margin: 0 auto;
-}
-
-.page-header__logo {
-  float: left;
-  padding: 12px 20px;
-  width: 131px;
-  height: 38px;
-
-  &:hover {
-    opacity: 0.7;
-  }
-  &:active {
-    opacity: 0.5;
-  }
+  background-color: @white;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
     display: flex;
     flex-wrap: nowrap;
-    height: 60px;
+    height: 110px;
     margin: 0 auto;
-    min-width: 708px;
     font-size: 18px;
     line-height: 24.86px;
   }
+
   .page-header__logo {
     float: none;
     padding: 25px 30px 0 0;
@@ -47,12 +33,11 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    display: flex;
-    flex-wrap: nowrap;
-    height: 90px;
+    height: 120px;
     margin: 0 auto;
-    width: 1440px;
-    justify-content: space-around;
+    font-size: 20px;
+    display: block;
+    background-color: transparent;
   }
 
   .page-header::before {
@@ -61,7 +46,7 @@
     height: 694px;
     position: absolute;
     top: 0px;
-    left: 720px;
+    left: 611px;
     z-index: -1;
   }
 

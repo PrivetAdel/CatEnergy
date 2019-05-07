@@ -1,21 +1,20 @@
-.main {
-  margin: 0 auto 9px;
-  width: 320px;
-}
-
 .main__introduction {
   background-image: url("../img/index-background-mobile@1x.jpg");
-  width: 320px;
-  height: 305px;
   background-repeat: no-repeat;
   background-position-x: center;
-  background-color: @green;
-  margin-bottom: 10px;
+  background-color: #64a83b;
+  height: 306px;
+  margin: 0 0 40px;
+}
+
+.main__wrapper {
+  width: 320px;
+  margin: 0 auto 10px;
 }
 
 .main__description {
   color: @white;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald";
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -26,7 +25,7 @@
 
 .main__slogan {
   color: @white;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald";
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
@@ -37,12 +36,15 @@
 }
 
 .main__picture {
-  padding: 27px 20px;
+  padding: 27px 20px 0;
+  width: 280px;
+  height: 270px;
 }
 
 .main__programm {
-  padding-top: 126px;
-  margin: 0 20px;
+  width: 320px;
+  padding-top: 135px;
+  margin: 0 auto;
 }
 
 .main__advantages {
@@ -52,32 +54,41 @@
 }
 
 .main__example {
-  width: 320px;
-  background-color: @lightgrey;
   padding: 0 0 37px 0;
 }
 
+.main__example::after {
+  content: '';
+  background-color: @lightgrey;
+  height: 705px;
+  position: absolute;
+  top: 1567px;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
 @media (min-width: @tablet-width) {
-  .main {
-    min-width: 768px;
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
+  .main-nav--closed {
+    height: 110px;
   }
 
   .main__introduction {
-    width: 708px;
+    width: 768px;
     display: flex;
     background: none;
     flex-direction: column;
-    margin: 0 auto 70px;
-    min-height: 820px;
+    margin: 0 auto 533px;
+  }
+
+  .main__wrapper {
+    width: 786px;
   }
 
   .main__description {
     color: @black;
     text-align: left;
-    margin: 52px 0 0 86px;
+    margin: 2px 0 0 117px;
     font-size: 60px;
     line-height: 60px;
     width: 487px;
@@ -86,11 +97,10 @@
   .main__slogan {
     color: @black;
     text-align: left;
-    margin-top: 14px;
+    margin: 16px 0 0 118px;
     font-size: 20px;
     line-height: 20px;
     width: 487px;
-    margin-left: 88px;
   }
 
   .main__picture {
@@ -102,53 +112,77 @@
   .main__programm {
     display: flex;
     margin: 0 auto;
-    width: 708px;
-    padding: 0;
+    width: 768px;
+    padding: 0 0 25px 0;
   }
 
   .main__advantages {
-    width: 708px;
-    display: flex;
-    margin: 0 auto;
-    flex-wrap: wrap;
+    width: 100%;
     border-bottom: 1px solid @lightgrey;
   }
 
   .main__example {
-    width: 708px;
+    width: 100%;
     display: flex;
     margin: 0 auto;
     flex-direction: column;
-    background-color: @white;
-    padding-top: 50px;
+    padding: 50px 0 49px;
+  }
+
+  .main__example::after {
+    content: '';
+    background-color: @lightgrey;
+    height: 462px;
+    width: 100%;
+    position: absolute;
+    top: 3124px;
+    left: 0;
+    z-index: -1;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main {
-    display: flex;
-    min-width: 1300px;
-    margin: 0 auto;
-  }
-
   .main__introduction {
     display: flex;
-    margin: 0 auto;
-    width: 1300px;
+    margin: 0 auto 349px;
+    width: 1220px;
     flex-wrap: wrap;
+    border: 1px solid red;
+  }
+
+  .main__wrapper {
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__description {
+    margin: 74px 0 0 81px;
+  }
+
+  .main__slogan {
+    margin: 15px 0 0 81px;
+  }
+
+  .main__picture {
+    display: none;
   }
 
   .main__programm {
-    display: flex;
-    margin: 0 auto;
-    width: 1300px;
+    display: block;
+    width: 100%;
+    margin: 0;
     padding: 0;
   }
 
   .main__advantages {
-    width: 1300px;
-    margin-top: 70px;
-    justify-content: space-around;
+    width: 1220px;
+    margin: 72px auto 0;
     border: none;
+  }
+
+  .main__example {
+    width: 100%;
+    padding: 0;
   }
 }

@@ -1,12 +1,15 @@
 .page-footer {
-  width: 320px;
   background-color: @lightgrey;
   margin: 0 auto;
 }
 
+.page-footer__maps {
+  width: 100%;
+}
+
 .page-footer__address {
   background-color: @white;
-  height: 106px;
+  height: 114px;
 }
 
 .page-footer__address img {
@@ -14,33 +17,18 @@
   height: 360px;
 }
 
-.page-footer__slogan {
-  font-family: "Oswald", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-  width: 125px;
-  padding: 20px 0 20px 20px;
-  margin: 0;
-  float: left;
+.page-footer__contacts {
+  padding: 0 20px 2px 20px;
 }
 
-.page-footer__adds {
-  line-height: 20px;
-  float: right;
-  padding-right: 20px;
-  margin: 20px 4px;
-}
-
-.page-footer__wrap {
-  padding: 36px 20px 0;
-  display: flex;
-  flex-direction: column;
+.page-footer__logotype {
+  width: 320px;
+  margin: 35px auto 25px;
 }
 
 .page-footer__logo {
-  margin: 0 auto 15px;
+  margin: 95px auto 0;
+  padding: 0 95px;
 }
 
 .page-footer__social,
@@ -50,7 +38,12 @@
 }
 
 .page-footer__social {
-  margin: 5px 0;
+  margin: 13px 0;
+}
+
+.page-footer__copyright {
+  width: 320px;
+  margin: 0 auto;
 }
 
 .page-footer__decor {
@@ -61,20 +54,14 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 67px;
-    background-color: @white;
-    width: 768px;
-    margin: 0 auto;
+    background-color: @lightgrey;
   }
 
   .page-footer__address {
-    display: flex;
-    justify-content: space-around;
-    margin: 60px auto 97px;
-    padding: 0 70px;
-    width: 708px;
+    background-color: @white;
+    margin: 60px auto 0;
+    padding: 0 0 87px;
+    width: 100%;
   }
 
   .page-footer__slogan {
@@ -94,20 +81,26 @@
   }
 
   .page-footer__maps {
-    width: 768px;
-    height: 400px;
+    width: 100%;
+    height: 395px;
   }
 
-  .page-footer__wrap {
+  .page-footer__contacts {
     width: 786px;
     display: flex;
     background-color: @lightgrey;
-    padding: 0 30px 42px;
+    padding: 0 0 42px;
     flex-direction: row;
+    margin: 0 auto;
   }
 
-  .page-footer__wrap hr {
+  .page-footer__contacts hr {
     display: none;
+  }
+
+  .page-footer__logotype {
+    width: 132px;
+    margin: 60px 0 0 -58px;
   }
 
   .page-footer__logo {
@@ -115,14 +108,13 @@
   }
 
   .page-footer__social {
-    padding: 0 30px 0 30px;
-    margin: 58px 0 0;
-    display: flex;
+    margin: 58px 0 0 123px;
   }
 
   .page-footer__copyright {
     padding: 0;
-    margin: 45px 41px 0;
+    margin: 45px 0 0 165px;
+    width: 162px;
   }
 
   .page-footer__address--catalog {

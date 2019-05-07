@@ -5,35 +5,36 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo logo">
-        <img class="logo__image--picture" src="img\logo-mobile.svg" width="195" height="40" alt="Кэт энерджи">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Подбор программы</a>
-            </li>
-          </ul>
+          <a class="main-nav__logo logo">
+            <img src="img\logo-mobile.svg" width="195" height="40" alt="Кэт энерджи">
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Подбор программы</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main class="page-catalog">
-      <h1 class="page-catalog__description">Каталог продукции</h1>
-      <div class="page-catalog__list">
+      <div class="page-catalog__description">
+        <h1>Каталог продукции</h1>
+      </div>
+      <section class="page-catalog__list">
         <div class="page-catalog__item product">
           <img class="product__image product__image--picture" src="img/chicken-small-mobile@1x.jpg" width="140" height="140" alt="Cat energy pro вкус курица 500 г">
           <h3 class="product__description">Cat energy pro 500 г</h3>
@@ -167,16 +168,18 @@
           </table>
           <button class="product__order button" type="button">Заказать</button>
         </div>
-        <section class="page-catalog__all-products all-products">
+        <div class="page-catalog__all-products all-products">
           <h2 class="visually-hidden">Показать все</h2>
           <p class="all-products__description">Показать еще 100500 товаров</p>
           <p class="all-products__slogan">На самом деле вкусов гораздо больше!</p>
           <button class="all-products__show button" type="button">Показать все</button>
-        </section>
-      </div>
-      <section class="page-catalog__additionally">
-        <h2 class="page-catalog__description page-catalog__description--line">Дополнительные товары</h2>
-        <div class="page-catalog__item-add additionally">
+        </div>
+      </section>
+      <section class="page-catalog__additionally additionally">
+        <div>
+          <h2 class="additionally__description">Дополнительные товары</h2>
+        </div>
+        <div class="additionally__product">
           <h3>Сахарозаменитель</h3>
           <table class="additionally__information">
             <tr class="additionally__list">
@@ -186,8 +189,8 @@
           </table>
           <button class="additionally__order button" type="button">Заказать</button>
         </div>
-        <div class="page-catalog__item-add additionally">
-          <h3>Вода питьевая</h3>
+        <div class="additionally__product">
+          <h3>Питьевая вода</h3>
           <table class="additionally__information">
             <tr class="additionally__list">
               <td class="additionally__item">5 литров</td>
@@ -196,7 +199,7 @@
           </table>
           <button class="additionally__order button" type="button">Заказать</button>
         </div>
-        <div class="page-catalog__item-add additionally">
+        <div class="additionally__product">
           <h3>Молоко</h3>
           <table class="additionally__information">
             <tr class="additionally__list">
@@ -206,7 +209,7 @@
           </table>
           <button class="additionally__order button" type="button">Заказать</button>
         </div>
-        <div class="page-catalog__item-add additionally">
+        <div class="additionally__product">
           <h3>Витамины</h3>
           <table class="additionally__information">
             <tr class="additionally__list">
@@ -222,36 +225,54 @@
       </section>
     </main>
     <footer class="page-footer">
-      <section class="page-footer__address page-footer__address--catalog">
-        <h2 class="visually-hidden">Адрес</h2>
-        <p class="page-footer__slogan">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
-        <p class="page-footer__adds">ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</p>
+      <section class="page-footer__address address">
+        <div class="address__wrapper">
+          <h2 class="visually-hidden">Адрес</h2>
+          <p class="address__slogan">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
+          <p class="address__adds">ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</p>
+        </div>
       </section>
-      <img class="page-footer__maps"src="img/bg-map-mobile@1x.png" width="320px" height="360px" alt="Карта">
-      <div class="page-footer__wrap">
-        <a class="page-footer__logo logo-footer">
-          <img class="logo-footer__image--title-footer" src="img/logo-footer.svg" width="130" height="26" alt="Кэт энерджи">
-        </a>
-        <hr class="programm__decor">
+      <img class="page-footer__maps"src="img/bg-map-mobile@1x.png" width="320px" height="362px" alt="Карта">
+      <section class="page-footer__contacts">
+        <div class="page-footer__logotype">
+          <a class="page-footer__logo">
+            <img class="page-footer__image--title-footer" src="img/logo-footer.svg" width="130" height="26" alt="Кэт энерджи">
+          </a>
+        </div>
+        <hr class="page-footer__decor">
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https:/vk.com/  htmlacademy"><img src="img/icon-vk-mobile.svg" width="23px"  height="13px"><span class="visually-hidden">Вконтакте</span></a>
+              <a class="social__link social__link--vkontakte" href="https:/vk.com/  htmlacademy"><img src="img/icon-vk-mobile.svg" width="21px"  height="14px"><span class="visually-hidden">Вконтакте</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https:/ www.instagram.com/htmlacademy"><img src="img/icon-insta-mobile.svg" width="20px" height="20px"><span class="visually-hidden">Инстаграм</span></a>
+              <a class="social__link social__link--instagram" href="https:/ www.instagram.com/htmlacademy"><img src="img/icon-insta-mobile.svg" width="17px" height="17px"><span class="visually-hidden">Инстаграм</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https:/  www.facebook.com/htmlacademy"><img src="img/icon-fb-mobile.svg"  width="13px" height="23px"><span class="visually-hidden">Фейсбук</span></a>
+              <a class="social__link social__link--facebook" href="https:/  www.facebook.com/htmlacademy"><img src="img/icon-fb-mobile.svg"  width="13px" height="20px"><span class="visually-hidden">Фейсбук</span></a>
               </li>
             </ul>
           </div>
-          <hr class="programm__decor">
+          <hr class="page-footer__decor">
           <div class="page-footer__copyright copyright">
             <a class="copyright__link--text" href="https://htmlacademy.ru/intensive/  adaptive">HTML Academy</a>
-            <a class="copyright__link--logo" href="https://htmlacademy.ru/intensive/  adaptive"><img src="img/htmlacademy.svg" height="35px"   width="30px"></a>
+            <a class="copyright__link--logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" height="45px"   width="40px"></a>
           </div>
-      </div>
+      </section>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+      navMain.classList.remove('main-nav--nojs');
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+      } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>
