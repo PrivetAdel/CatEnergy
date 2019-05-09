@@ -12,6 +12,7 @@
   &:hover {
     opacity: 0.7;
   }
+
   &:active {
     opacity: 0.5;
   }
@@ -40,60 +41,63 @@
 }
 
 .main-nav--opened .main-nav__toggle::before {
-    content: url("../img/icon-close.svg");
-    background-repeat: no-repeat;
+  content: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  display: block;
+  width: 18px;
+  height: 18px;
+  float: right;
+  margin: 23px;
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .site-list__item {
     display: block;
-    width: 18px;
-    height: 18px;
-    float: right;
-    margin: 23px;
-    .main-nav--nojs .main-nav__toggle {
-      display: none;
-    }
-    .main-nav--nojs .site-list__item {
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+
+    &--active {
       display: block;
     }
   }
+}
 
-  @media (max-width: @mobile-width-only) {
-    .main-nav--closed .site-list__item {
-      display: none;
-    &--active {
-      display: block;
-      }
-    }
+.main-nav__list {
+  padding-top: 65px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: flex;
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .main-nav__wrapper {
+    width: 175px;
+    padding: 23px 0 0;
+    margin: 0 0 10px;
   }
 
   .main-nav__list {
-    padding-top: 65px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 440px;
+    padding-top: 42px;
+    margin-left: 113px;
   }
 
-  @media (min-width: @tablet-width) {
-    .main-nav {
-      display: flex;
-      width: 768px;
-      margin: 0 auto;
-    }
-
-    .main-nav__wrapper {
-      width: 175px;
-      padding: 23px 0 0 0;
-      margin: 0 0 0 10px;
-    }
-
-    .main-nav__list {
-      display: flex;
-      flex-wrap: nowrap;
-      width: 440px;
-      padding-top: 42px;
-      margin-left: 113px;
-    }
-
-    .main-nav__toggle {
-      display: none;
-      padding: 0;
-      width: 0;
-    }
+  .main-nav__toggle {
+    display: none;
+    padding: 0;
+    width: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {

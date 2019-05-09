@@ -1,5 +1,5 @@
 .page-header {
-  font-family: "Oswald";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
@@ -41,12 +41,16 @@
   }
 
   .page-header::before {
-    content: url("../img/index-background-desktop@1x.jpg");
-    width: 720px;
-    height: 694px;
+    content: "";
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-color: #;
+    width: 50%;
+    height: auto;
     position: absolute;
-    top: 0px;
-    left: 611px;
+    top: 0;
+    right: 0;
     z-index: -1;
   }
 
