@@ -1,5 +1,5 @@
 .advantages__title {
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
@@ -19,67 +19,70 @@
 
 .advantages__description {
   width: 200px;
-  padding: 0px 0 0 20px;
-  margin: 11px 0 0;
+  padding: 0 0 0 20px;
+  margin: 12px 0 0;
 }
 
 .advantages__item--sheet {
-  background-image: url(../img/advantage-leaf@1x.png);
+  background-image: url("../img/advantage-leaf@1x.png");
   background-color: @green;
   width: 60px;
   height: 60px;
   margin: 9px 0;
-  background-position-x: center;
-  background-position-y: center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
 .advantages__item--powder {
-  background-image: url(../img/advantage-powder@1x.png);
+  background-image: url("../img/advantage-powder@1x.png");
   background-color: @green;
   width: 60px;
   height: 60px;
   margin: 10px 0;
-  background-position-x: center;
-  background-position-y: center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
-.advantages__item--cutlery{
-  background-image: url(../img/advantage-dining@1x.png);
+.advantages__item--cutlery {
+  background-image: url("../img/advantage-dining@1x.png");
   background-color: @green;
   width: 60px;
   height: 60px;
   margin: 10px 0;
-  background-position-x: center;
-  background-position-y: center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
-.advantages__item--scales{
-  background-image: url(../img/advantage-clock@1x.png);
+.advantages__item--scales {
+  background-image: url("../img/advantage-clock@1x.png");
   background-color: @green;
   width: 60px;
   height: 60px;
   margin: 10px 0 0;
-  background-position-x: center;
-  background-position-y: center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
+  .advantages__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .advantages__title {
     font-size: 60px;
     text-align: left;
     width: 708px;
-    padding: 0 0 65px 0;
+    padding: 0 0 65px 29px;
   }
 
   .advantages__list {
     flex-direction: row;
     flex-wrap: wrap;
     width: 708px;
-    padding: 0;
+    padding: 0 0 0 29px;
     justify-content: space-between;
   }
 
@@ -108,9 +111,9 @@
   }
 
   .advantages__item--sheet::after {
-    content: '1';
+    content: "1";
     color: @lightgrey;
-    font-family: "Oswald", Arial, sans-serif;
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 281.07px;
     line-height: 281.07px;
     font-weight: 400;
@@ -118,12 +121,13 @@
     top: -38px;
     left: 120px;
     opacity: 0.5;
+    z-index: -1;
   }
 
   .advantages__item--powder::after {
-    content: '2';
+    content: "2";
     color: @lightgrey;
-    font-family: "Oswald", Arial, sans-serif;
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 281.07px;
     line-height: 281.07px;
     font-weight: 400;
@@ -131,12 +135,13 @@
     top: -38px;
     left: 112px;
     opacity: 0.5;
+    z-index: -1;
   }
 
   .advantages__item--cutlery::after {
-    content: '3';
+    content: "3";
     color: @lightgrey;
-    font-family: "Oswald", Arial, sans-serif;
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 281.07px;
     line-height: 281.07px;
     font-weight: 400;
@@ -144,12 +149,13 @@
     top: -38px;
     left: 112px;
     opacity: 0.5;
+    z-index: -1;
   }
 
   .advantages__item--scales::after {
-    content: '4';
+    content: "4";
     color: @lightgrey;
-    font-family: "Oswald", Arial, sans-serif;
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 281.07px;
     line-height: 281.07px;
     font-weight: 400;
@@ -157,6 +163,7 @@
     top: -38px;
     left: 112px;
     opacity: 0.5;
+    z-index: -1;
   }
 
   .advantages__description {
@@ -164,16 +171,22 @@
     line-height: 24px;
     width: 245px;
     padding: 21px 0;
+    margin: 11px 0 0;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .advantages__wrapper {
+    width: 1220px;
+    margin: 0;
+  }
+
   .advantages__list {
     flex-direction: row;
     flex-wrap: wrap;
     width: 1300px;
     padding: 0;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .advantages__item {
@@ -185,5 +198,6 @@
 
   .advantages__title {
     width: 1220px;
+    padding: 0 0 65px 1px;
   }
 }

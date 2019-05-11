@@ -1,16 +1,19 @@
 .all-products__description {
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
+  padding: 0;
+  margin: 47px 0 0 -68px;
 }
 
 .all-products__slogan {
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+  margin: 8px 0 0;
 }
 
 .all-products__description::before {
@@ -19,15 +22,21 @@
   width: 30px;
   height: 30px;
   color: @lightgrey;
+  position: relative;
+  top: -40px;
+  left: 135px;
 }
 
 .all-products__show {
   background-color: @lightgrey;
   color: @grey;
+  margin: 22px 0 0 21px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 @media (min-width: @tablet-width) {
-  .all-products__description{
+  .all-products__description {
     font-size: 20px;
     margin: 165px auto 0;
     width: 200px;

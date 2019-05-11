@@ -1,5 +1,5 @@
 .programm__list {
-  margin: 21px 0;
+  margin: 21px 20px;
 }
 
 .programm__item {
@@ -16,11 +16,11 @@
 
 .programm__description--pro {
   padding: 0;
-  margin: 34px -1px 22px;
+  margin: 35px -1px 22px;
 }
 
 .programm__title {
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 37.02px;
   font-weight: 400;
@@ -35,27 +35,27 @@
 
 .programm__title--pro {
   margin: -42px;
-  padding: 0 0 0 38px;
+  padding: 0 0 0 39px;
 }
 
 .programm__decor {
   color: @grey;
   size: 1px;
   width: 240px;
-  margin: 0 -2px 20px;
+  margin: 0 -2px 19px;
 }
 
 .programm__button {
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  margin: -2px;
+  margin: 0 0 0 -1px;
 }
 
 .programm__title--slim::before {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   background-color: @green;
@@ -76,15 +76,15 @@
 }
 
 .programm__title--pro::before {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   background-color: @green;
   border-radius: 150px;
   width: 50px;
   height: 50px;
-  left: 5px;
-  top: 44px;
+  left: 4px;
+  top: 45px;
 }
 
 .programm__title--pro::after {
@@ -92,8 +92,8 @@
   display: block;
   position: relative;
   width: 66px;
-  left: -3px;
-  top: -33px;
+  left: -4px;
+  top: -32px;
 }
 
 .programm__button::after {
@@ -102,12 +102,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .programm__choice {
-    position: absolute;
-    top: 369px;
-    left: 118px;
-  }
-
   .programm__list {
     display: flex;
     flex-direction: column;
@@ -134,25 +128,25 @@
   }
 
   .programm__title--slim {
-    margin: -124px 0 0 -1px;
+    margin: -123px 0 0 -2px;
   }
 
   .programm__title--slim::before {
     width: 200px;
     height: 200px;
-    left: 392px;
+    left: 394px;
     top: 216px;
   }
 
   .programm__title--slim::after {
     width: 139px;
-    left: 423px;
-    top: -33px;
+    left: 425px;
+    top: -32px;
   }
 
   .programm__description--slim {
     width: 375px;
-    margin: -170px 0 0 -2px;
+    margin: -169px 0 0 -2px;
     text-align: left;
     font-size: 16px;
     line-height: 24px;
@@ -160,7 +154,7 @@
   }
 
   .programm__title--pro {
-    margin: -122px 0 0 -1px;
+    margin: -123px 0 0 -1px;
   }
 
   .programm__title--pro::before {
@@ -199,33 +193,64 @@
 @media (min-width: @desktop-width) {
   .programm__list {
     flex-direction: row;
-    width: 1300px;
+    justify-content: space-between;
+    width: 1220px;
+    margin: 0 auto;
   }
 
   .programm__item {
-    width: 570px;
-    margin-bottom: 30px;
+    width: 470px;
     display: flex;
-    padding-left: 50px;
-    padding-top: 82px;
     flex-wrap: wrap;
-    margin: 0 40px;
+    margin: 0;
+    padding: 0 50px 0;
   }
 
-  .programm__item--slim {
-    width: 105px;
-    height: 105px;
-    order: 0;
+  .programm__title {
+    width: 470px;
+    margin: -24px 0 0 165px;
   }
 
-  .programm__item--pro {
-    order: 0;
-    width: 105px;
-    height: 105px;
+  .programm__title--slim::before {
+    width: 100px;
+    height: 100px;
+    left: -162px;
+    top: 72px;
   }
 
-  .programm__choice {
-    position: absolute;
-    top: 455px;
+  .programm__title--slim::after {
+    width: 71px;
+    left: -149px;
+    top: -71px;
+  }
+
+  .programm__title--pro::before {
+    width: 100px;
+    height: 100px;
+    left: -161px;
+    top: 72px;
+  }
+
+  .programm__title--pro::after {
+    width: 133px;
+    left: -179px;
+    top: -43px;
+  }
+
+  .programm__description--slim {
+    margin: -25px 0 0 3px;
+    width: 470px;
+    padding-bottom: 31px;
+  }
+
+  .programm__description--pro {
+    width: 470px;
+    margin: 17px 0 0 3px;
+    padding-bottom: 31px;
+  }
+
+  .programm__button {
+    margin: 0 0 0 3px;
+    padding-bottom: 62px;
   }
 }

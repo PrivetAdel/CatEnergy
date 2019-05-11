@@ -1,15 +1,20 @@
+.example__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .example__title {
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
   padding: 19px 20px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .example__toggles {
   display: flex;
-  margin: 0 64px;
+  margin: 2px 64px;
   width: 280px;
 }
 
@@ -17,17 +22,6 @@
   padding: 0 20px;
   width: 270px;
   margin: 3px 0;
-}
-
-.example__cost {
-  font-family: "Oswald", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  text-align: center;
-  padding: 0 66px;
-  text-transform: uppercase;
-  margin: 13px 0px 0 0;
 }
 
 .example__results {
@@ -54,52 +48,37 @@
 }
 
 @media (min-width: @tablet-width) {
+  .example__wrapper {
+    width: 768px;
+    margin: 0 auto;
+  }
+
   .example__title {
     font-size: 60px;
     line-height: 60px;
     text-align: left;
     padding: 0 0 70px 0;
-    margin: -8px 0;
+    margin: -50px 0 0 30px;
   }
 
   .example__description {
     font-size: 16px;
     line-height: 24px;
     width: 690px;
-    padding: 0 0 49px 0;
-  }
-
-  .example__cost {
-    font-size: 20px;
-    line-height: 28px;
-    width: 192px;
-    padding: 0;
-    position: relative;
-    top: -5px;
-    left: -1px;
-    text-align: right;
+    padding: 0 0 53px 0;
+    margin: -6px 0 0 29px;
   }
 
   .example__results {
-    margin: 0;
+    margin: 0 auto;
+    width: 708px;
   }
 
   .example__picture {
+    width: 708px;
     padding-top: 91px;
     margin: 0 auto 165px;
   }
-
-/*
-  .example__picture li::after {
-    content: '';
-    background-color: @lightgrey;
-    height: 460px;
-    width: 768px;
-    position: absolute;
-    top: 10px;
-    display: block;
-  }
-*/
 
   .example__picture img {
     width: 708px;
@@ -113,10 +92,48 @@
 
   .example__toggles {
     display: flex;
-    margin: -3px 0 0 58px;
+    margin: -3px auto 58px;
     position: relative;
     top: 99px;
-    left: 10px;
-    width: 708px;
+    left: -2px;
+    width: 568px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    width: 1220px;
+    margin: 0 auto;
+    height: 596px;
+  }
+
+  .example__title {
+    margin: 0 0 0 1px;
+    padding: 0;
+  }
+
+  .example__description {
+    margin: 146px 0 0 1px;
+    width: 439px;
+    padding: 0 0 68px 0;
+  }
+
+  .example__results {
+    width: 1220px;
+    margin: 0;
+  }
+
+  .example__picture {
+    position: relative;
+    top: -512px;
+    left: 569px;
+    width: 690px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .example__toggles {
+    top: -207px;
+    left: 326px;
   }
 }
