@@ -12,6 +12,10 @@
   height: 114px;
 }
 
+.page-footer__address--lightgrey {
+  background-color: @lightgrey;
+}
+
 .page-footer__address img {
   width: 320px;
   height: 360px;
@@ -59,7 +63,7 @@
 
   .page-footer__address {
     background-color: @white;
-    margin: 60px auto 0;
+    margin: 1px auto 0;
     padding: 0 0 87px;
     width: 100%;
   }
@@ -104,11 +108,11 @@
   }
 
   .page-footer__logo {
-    margin: 60px 0 0;
+    margin: 60px 0 0 -7px;
   }
 
   .page-footer__social {
-    margin: 58px 0 0 123px;
+    margin: 59px 0 0 116px;
   }
 
   .page-footer__copyright {
@@ -121,5 +125,34 @@
     height: 200px;
     width: 768px;
     background-color: @lightgrey;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    position: relative;
+  }
+
+  .page-footer__address {
+    position: absolute;
+    width: 570px;
+    top: 96px;
+    left: 66px;
+  }
+
+  .page-footer__contacts {
+    width: 1220px;
+  }
+
+  .page-footer__logotype {
+    margin: 64px 0 0 -88px;
+  }
+
+  .page-footer__social {
+    margin: 64px 0 0 374px;
+  }
+
+  .page-footer__copyright {
+    margin: 51px 0 0 420px;
   }
 }

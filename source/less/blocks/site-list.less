@@ -30,6 +30,20 @@
   .site-list__item:last-child {
     margin-left: 36px;
   }
+
+  .site-list__item--active {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 34px;
+      left: 0;
+      height: 2px;
+      background: #68b738;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -37,21 +51,10 @@
     border: none;
     padding: 0;
 
-    &--active {
-      position: relative;
-
-      &::after {
-        content: "";
-
-        position: absolute;
-        right: 0;
-        bottom: -3px;
-        left: 0;
-
-        height: 3px;
-
-        background: #826550;
-      }
+    &::after {
+      bottom: 79px;
+      left: 2px;
+      background: @white;
     }
   }
 

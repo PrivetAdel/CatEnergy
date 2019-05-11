@@ -57,14 +57,15 @@
   width: 170px;
   text-align: center;
   padding: 20px;
-  margin: 53px 0 25px;
+  margin: 175px 0 0 55px;
+  position: relative;
 }
 
 .page-catalog__present::before {
   content: url("../img/icon-gift.svg");
-  position: relative;
-  top: -76px;
-  left: 81px;
+  position: absolute;
+  top: -103px;
+  left: 77px;
 }
 
 @media (min-width: @tablet-width) {
@@ -76,9 +77,15 @@
   }
 
   .page-catalog__description {
-    font-size: 60px;
     width: 708px;
     border: none;
+  }
+
+  .page-catalog__description h1 {
+    padding: 0;
+    margin: 30px 0 70px 30px;
+    font-size: 60px;
+    width: 708px;
   }
 
   .page-catalog__list {

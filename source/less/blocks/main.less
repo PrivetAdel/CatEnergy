@@ -20,7 +20,7 @@
   font-weight: 400;
   margin: 0;
   text-align: center;
-  padding: 28px 0 20px;
+  padding: 28px 0 25px;
 }
 
 .main__slogan {
@@ -31,14 +31,17 @@
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 auto;
-  padding: 6px 0 0;
+  margin: 0 0 0 -2px;
 }
 
 .main__picture {
   padding: 27px 20px 0;
   width: 280px;
   height: 270px;
+}
+
+.main__choice {
+  margin: 0 20px;
 }
 
 .main__programm {
@@ -50,22 +53,12 @@
 .main__advantages {
   width: 320px;
   min-height: 400px;
-  margin: -25px auto 41px;
+  margin: -24px auto 41px;
 }
 
 .main__example {
-  padding: 0 0 37px 0;
-}
-
-.main__example::after {
-  content: "";
+  padding: 0 0 34px 0;
   background-color: @lightgrey;
-  height: 705px;
-  position: absolute;
-  top: 1567px;
-  left: 0;
-  width: 100%;
-  z-index: -1;
 }
 
 @media (min-width: @tablet-width) {
@@ -107,6 +100,13 @@
     width: 708px;
     height: 609px;
     padding: 0;
+    margin: 26px 0 0 63px;
+  }
+
+  .main__choice {
+    position: relative;
+    top: -591px;
+    left: 98px;
   }
 
   .main__programm {
@@ -126,17 +126,18 @@
     display: flex;
     margin: 0 auto;
     flex-direction: column;
-    padding: 50px 0 49px;
+    padding: 50px 0 108px 0;
+    background-color: transparent;
+    position: relative;
   }
 
-  .main__example::after {
+  .main__example::before {
     content: "";
-    background-color: @lightgrey;
-    height: 462px;
+    background: @lightgrey;
     width: 100%;
+    height: 461px;
     position: absolute;
-    top: 3124px;
-    left: 0;
+    top: 577px;
     z-index: -1;
   }
 }
@@ -147,7 +148,6 @@
     margin: 0 auto 349px;
     width: 1220px;
     flex-wrap: wrap;
-    border: 1px solid red;
   }
 
   .main__wrapper {
@@ -161,11 +161,16 @@
   }
 
   .main__slogan {
-    margin: 15px 0 0 81px;
+    margin: 17px 0 0 82px;
   }
 
   .main__picture {
     display: none;
+  }
+
+  .main__choice {
+    top: 52px;
+    left: 59px;
   }
 
   .main__programm {
@@ -177,12 +182,15 @@
 
   .main__advantages {
     width: 1220px;
-    margin: 72px auto 0;
+    margin: 73px auto 0;
     border: none;
   }
 
   .main__example {
-    width: 100%;
     padding: 0;
+  }
+
+  .main__example::before {
+    top: 135px;
   }
 }

@@ -62,7 +62,7 @@
   .main-nav--closed .site-list__item {
     display: none;
 
-    &--active {
+    .main-nav--active {
       display: block;
     }
   }
@@ -85,12 +85,22 @@
     margin: 0 0 10px;
   }
 
+  .main-nav__logo {
+    width: 183px;
+  }
+
+  .main-nav__logo img {
+    margin: -11px 0 0 10px;
+    width: 174px;
+    height: 57px;
+  }
+
   .main-nav__list {
     display: flex;
     flex-wrap: nowrap;
     width: 440px;
     padding-top: 42px;
-    margin-left: 113px;
+    margin-left: 123px;
   }
 
   .main-nav__toggle {
@@ -106,7 +116,6 @@
     display: flex;
     padding: 31px 0 0;
     margin: 0 auto;
-    border: 1px solid red;
     justify-content: space-between;
   }
 
@@ -122,12 +131,13 @@
   }
 
   .main-nav__logo img {
-    width: 202px;
+    margin: -13px 0 0;
+    width: 203px;
+    height: 60px;
   }
 
   .main-nav__list {
     width: 479px;
     padding: 42px 0 0;
-    margin-left: 132px;
   }
 }

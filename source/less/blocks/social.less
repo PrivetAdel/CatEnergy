@@ -8,7 +8,11 @@
 }
 
 .social__item {
-  padding: 9px 0 3px;
+  padding: 10px 0 3px 4px;
+}
+
+.social__item:last-child {
+  padding: 8px 0 3px 4px;
 }
 
 .social__link--vkontakte {
@@ -31,7 +35,7 @@
 @media (min-width: @tablet-width) {
   .social__list {
     width: 135px;
-    margin: 7px 0 125px;
+    margin: 7px 0 0 125px;
     flex-wrap: nowrap;
   }
 
@@ -49,13 +53,19 @@
     width: 24px;
     height: 21px;
     padding: 0;
-    margin: -4px 0 0;
+    margin: -5px 0 0 1px;
   }
 
   .social__link--facebook img {
     width: 13px;
     height: 34px;
     padding: 0;
-    margin: -11px 1px 0 0;
+    margin: -21px 2px 0 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social__link--instagram {
+    padding: 0 0 0 5px;
   }
 }
