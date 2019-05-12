@@ -1,4 +1,4 @@
-.additionally__description {
+.additionally__description h2 {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.additionally__description::after {
+.additionally__description h2::after {
   content: "";
   width: 53px;
   height: 3px;
@@ -51,33 +51,173 @@
   line-height: 20px;
 }
 
+.additionally__picture {
+  padding-top: 10px;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-color: #64a83b;
+  background-position-y: 43%;
+  width: 280px;
+  height: 279px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  margin: 39px auto 35px;
+}
+
+.additionally__present {
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+  width: 170px;
+  text-align: center;
+  padding: 20px;
+  margin: 157px 0 0 35px;
+  position: relative;
+}
+
+.additionally__present::before {
+  content: url("../img/icon-gift.svg");
+  position: absolute;
+  top: -103px;
+  left: 77px;
+}
+
 @media (min-width: @tablet-width) {
-  .additionally {
-    width: 708px;
-    height: 140px;
+  .additionally__description h2 {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0 0 80px 38px;
+  }
+
+  .additionally__description h2::after {
+    width: 327px;
+    top: 22px;
+    left: 373px;
+  }
+
+  .additionally__description h2::before {
+    content: "";
+    width: 28px;
+    height: 3px;
+    background-color: #68b738;
+    position: absolute;
+    top: 22px;
+    left: -68px;
+  }
+
+  .additionally__product {
+    width: 706px;
     border: 1px solid @grey;
     background-color: @white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     border-collapse: collapse;
+    padding: 12px 0 26px;
   }
 
   .additionally h3 {
     font-size: 20px;
     line-height: 20px;
     text-transform: uppercase;
-    margin: 28px 0 0 40px;
+    margin: 13px 0 0 38px;
   }
 
   .additionally__order {
     width: 633px;
-    margin: 0 auto;
+    height: 40px;
+    margin: 19px auto 0;
   }
 
   .additionally__information {
-    margin: 30px 40px 0 0;
+    margin: 14px 35px 0 0;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  .additionally__list {
+    width: 229px;
+  }
+
+  .additionally__picture {
+    border: none;
+    width: 708px;
+    height: 200px;
+    display: flex;
+    margin: 70px auto 55px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-color: #64a83b;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    padding: 0;
+  }
+
+  .additionally__present {
+    margin: 72px 0 0 423px;
+    padding: 0;
+    text-align: left;
+  }
+
+  .additionally__present::before {
+    top: -8px;
+    left: -333px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additionally__description {
+    width: 1300px;
+  }
+
+  .additionally__description h2 {
+    margin: 0 0 80px 39px;
+  }
+
+  .additionally__description h2::after {
+    width: 957px;
+  }
+
+  .additionally__products {
+    width: 895px;
+  }
+
+  .additionally__product {
+    border-left: none;
+    border-right: none;
+    margin: 0;
+    padding: 12px 0 15px;
+    flex-wrap: nowrap;
+    width: 895px;
+  }
+
+  .additionally__product h3 {
+    width: 245px;
+    margin: 13px 0 0 2px;
+  }
+
+  .additionally__information {
+    width: 245px;
+  }
+
+  .additionally__order {
+    width: 245px;
+    margin: 3px 0 0 0;
+  }
+
+  .additionally__picture {
+    width: 245px;
+    height: 290px;
+    margin: 0;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-color: #64a83b;
+  }
+
+  .additionally__present {
+    margin: 187px 0 0 38px;
+    text-align: center;
+  }
+
+  .additionally__present::before {
+    top: -123px;
+    left: 57px;
   }
 }

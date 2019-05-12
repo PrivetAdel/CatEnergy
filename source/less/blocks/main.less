@@ -42,6 +42,15 @@
 
 .main__choice {
   margin: 0 20px;
+
+  &:hover {
+    background-color: @darkdreen;
+  }
+
+  &:active {
+    background-color: @darkdreen;
+    color: @lightgreen;
+  }
 }
 
 .main__programm {
@@ -97,15 +106,15 @@
   }
 
   .main__picture {
-    width: 708px;
-    height: 609px;
+    width: 709px;
+    height: 608px;
     padding: 0;
-    margin: 26px 0 0 63px;
+    margin: 20px 0 0 29px;
   }
 
   .main__choice {
     position: relative;
-    top: -591px;
+    top: -584px;
     left: 98px;
   }
 
@@ -150,6 +159,20 @@
     flex-wrap: wrap;
   }
 
+  .main__introduction::before {
+    content: "";
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-color: #64a83b;
+    width: 53.5%;
+    height: 696px;
+    position: absolute;
+    top: 0;
+    right: -47px;
+    z-index: -1;
+  }
+
   .main__wrapper {
     width: 1300px;
     display: flex;
@@ -165,11 +188,14 @@
   }
 
   .main__picture {
-    display: none;
+    width: 552px;
+    height: 499px;
+    padding: 0;
+    margin: -261px 0 0 450px;
   }
 
   .main__choice {
-    top: 52px;
+    top: -190px;
     left: 59px;
   }
 

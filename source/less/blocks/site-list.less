@@ -50,19 +50,25 @@
   .site-list__item {
     border: none;
     padding: 0;
-
-    &::after {
-      bottom: 79px;
-      left: 2px;
-      background: @white;
-    }
   }
 
   .site-list__item:first-child {
     margin-right: 33px;
   }
 
-  .site-list__item a {
+  .site-list__item--white a {
     color: @white;
+  }
+
+  .site-list__item::after {
+    bottom: 79px;
+    left: 2px;
+    background: @green;
+  }
+
+  .site-list__item--white::after {
+    bottom: 79px;
+    left: 2px;
+    background: @white;
   }
 }
