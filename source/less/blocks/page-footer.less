@@ -57,12 +57,15 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer {
-    background-color: @lightgrey;
-  }
-
   .page-footer__address {
     background-color: @white;
+    margin: 1px auto 0;
+    padding: 0 0 87px;
+    width: 100%;
+  }
+
+  .page-footer__address--lightgrey {
+    background-color: @lightgrey;
     margin: 1px auto 0;
     padding: 0 0 87px;
     width: 100%;
@@ -138,6 +141,7 @@
     width: 570px;
     top: 96px;
     left: 66px;
+    background-color: @white;
   }
 
   .page-footer__contacts {

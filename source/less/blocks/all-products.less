@@ -38,22 +38,41 @@
 @media (min-width: @tablet-width) {
   .all-products__description {
     font-size: 20px;
-    margin: 165px auto 0;
-    width: 200px;
+    margin: 164px 0 0 80px;
+    width: 165px;
+    position: relative;
+  }
+
+  .all-products__description::before {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -115px;
+    left: 32px;
   }
 
   .all-products__slogan {
     font-size: 16px;
-    margin: 28px auto 0;
+    line-height: 18px;
+    margin: 26px auto 0;
     width: 200px;
   }
 
   .all-products__show {
-    margin: 85px auto 0;
+    margin: 86px auto 0;
+    height: 40px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .all-products__description {
+    margin: 164px 0 0 40px;
+  }
+
+  .all-products__slogan {
+    margin: 27px auto 0;
+  }
+
   .all-products__show {
     width: 170px;
   }
