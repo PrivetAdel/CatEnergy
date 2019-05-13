@@ -17,11 +17,11 @@
 }
 
 .slider__circle {
-  margin-top: 4px;
-  margin-left: 4px;
   position: absolute;
+  top: 7px;
+  left: 62px;
   height: 6px;
-  width: 33px;
+  width: 34px;
   border-radius: 5px;
   background-color: @green;
 }
@@ -29,8 +29,15 @@
 @media (min-width: @tablet-width) {
   .slider__toggle {
     font-size: 20px;
-    padding-bottom: 6px;
     border-bottom: 1px dotted @grey;
+  }
+
+  .slider__toggle:hover {
+    border-bottom: 1px solid @grey;
+  }
+
+  .slider__toggle:active {
+    border-bottom: none;
   }
 
   .slider__capsule {
@@ -38,7 +45,7 @@
     width: 428px;
     height: 6px;
     background-color: @grey;
-    margin: 8px 22px 0 24px;
+    margin: 16px -13px 0 24px;
   }
 
   .slider__circle {
@@ -48,8 +55,17 @@
     border: 1px solid @grey;
     background-color: @white;
     position: relative;
-    top: -17px;
-    left: 195px;
+    top: 2px;
+    left: -216px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+      border: 2px solid @green;
+    }
   }
 
   .slider__circle::before {
@@ -61,5 +77,16 @@
     position: absolute;
     top: 10px;
     left: 11px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__capsule {
+    margin: 16px -15px 0 24px;
+  }
+
+  .slider__circle {
+    top: -1px;
+    left: -217px;
   }
 }
