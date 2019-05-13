@@ -5,6 +5,17 @@
 
 .page-footer__maps {
   width: 100%;
+  position: relative;
+}
+
+.page-footer__maps::after {
+  content: url("../img/map-pin.png");
+  width: 124px;
+  height: 108px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
 }
 
 .page-footer__address {
@@ -33,6 +44,14 @@
 .page-footer__logo {
   margin: 95px auto 0;
   padding: 0 95px;
+}
+
+.page-footer__logo svg:hover {
+  opacity: 0.7;
+}
+
+.page-footer__logo svg:active {
+  opacity: 0.5;
 }
 
 .page-footer__social,
@@ -107,7 +126,7 @@
 
   .page-footer__logotype {
     width: 132px;
-    margin: 60px 0 0 -58px;
+    margin: 58px 0 0 -50px;
   }
 
   .page-footer__logo {
@@ -120,7 +139,7 @@
 
   .page-footer__copyright {
     padding: 0;
-    margin: 45px 0 0 165px;
+    margin: 45px 0 0 155px;
     width: 162px;
   }
 
@@ -148,15 +167,19 @@
     width: 1220px;
   }
 
+  .page-footer__maps {
+    height: 401px;
+  }
+
   .page-footer__logotype {
-    margin: 64px 0 0 -88px;
+    margin: 58px 0 0 -89px;
   }
 
   .page-footer__social {
-    margin: 64px 0 0 374px;
+    margin: 57px 0 0 374px;
   }
 
   .page-footer__copyright {
-    margin: 51px 0 0 420px;
+    margin: 45px 0 0 422px;
   }
 }

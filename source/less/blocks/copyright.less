@@ -5,25 +5,41 @@
 
 .copyright__link--logo {
   color: @darkgrey;
-  margin: 5px -32px 0 0;
-  width: 17px;
+  margin: 2px -27px 0 0;
+}
+
+.copyright__link--logo svg:hover {
+  fill: #68b738;
+}
+
+.copyright__link--logo svg:active {
+  fill: #68b738;
+  opacity: 0.5;
 }
 
 .copyright__link--text {
   font-size: 16px;
   line-height: 16px;
   color: @darkgrey;
-  margin: 1px 0 0 -49px;
+  margin: 0 0 0 -49px;
   padding: 18px 0 30px 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .copyright__link--text {
-    margin: 0 0 0 -50px;
+    margin: 0 0 0 -37px;
   }
 
   .copyright__link--logo {
-    margin: 4px 46px 0 0;
+    margin: 2px 7px 0 0;
   }
 }
 
@@ -33,6 +49,6 @@
   }
 
   .copyright__link--logo {
-    margin: 4px 6px 0 0;
+    margin: 2px -7px 0 0;
   }
 }

@@ -5,6 +5,13 @@
   background-color: #64a83b;
   height: 306px;
   margin: 0 0 40px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .main__introduction {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: auto 306px;
+    }
+  }
 }
 
 .main__wrapper {
@@ -135,7 +142,7 @@
     display: flex;
     margin: 0 auto;
     flex-direction: column;
-    padding: 50px 0 108px 0;
+    padding: 50px 0 104px 0;
     background-color: transparent;
     position: relative;
   }
@@ -171,6 +178,13 @@
     top: 0;
     right: -47px;
     z-index: -1;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .main__introduction::before {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: auto 696px;
+      }
+    }
   }
 
   .main__wrapper {
