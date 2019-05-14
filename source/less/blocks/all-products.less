@@ -1,3 +1,13 @@
+.all-products {
+  border: 1px solid @grey;
+  height: 430px;
+  width: 322px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: @white;
+}
+
 .all-products__description {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
@@ -21,7 +31,6 @@
   margin: 20px;
   width: 30px;
   height: 30px;
-  color: @lightgrey;
   position: relative;
   top: -40px;
   left: 135px;
@@ -53,10 +62,11 @@
   }
 
   .all-products__description::before {
+    content: url("../img/icon-plus.svg");
     width: 60px;
     height: 60px;
     position: absolute;
-    top: -115px;
+    top: -130px;
     left: 32px;
   }
 
@@ -74,8 +84,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .all-products {
+    width: 243px;
+  }
+
   .all-products__description {
-    margin: 164px 0 0 40px;
+    margin: 162px 0 0 40px;
   }
 
   .all-products__slogan {

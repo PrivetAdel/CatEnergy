@@ -45,19 +45,6 @@
   margin: 0 -2px 19px;
 }
 
-.programm__button {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin: 0 0 0 -1px;
-
-  &:active {
-    opacity: 0.5;
-  }
-}
-
 .programm__title--slim::before {
   content: "";
   display: block;
@@ -98,6 +85,28 @@
   width: 66px;
   left: -4px;
   top: -32px;
+}
+
+.programm__button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 0 0 -1px;
+
+  &:hover::after {
+    content: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:active::after {
+    content: url("../img/icon-right-arrow-verylong.svg");
+    opacity: 0.5;
+  }
 }
 
 .programm__button::after {
