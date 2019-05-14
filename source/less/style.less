@@ -39,11 +39,11 @@ body {
 a {
   text-decoration: none;
   color: #111111;
-}
 
-a:focus,
-a:active {
-  outline: none;
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
 
 ul {
@@ -57,6 +57,11 @@ button {
   border: none;
   color: inherit;
   background-color: transparent;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active) {

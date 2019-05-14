@@ -1,27 +1,23 @@
 .information__item {
   font-size: 12px;
-  line-height: 16px;
+  line-height: 12px;
 }
 
 .information__list {
   display: flex;
   justify-content: space-between;
+  margin-top: 3px;
 }
 
 @media (min-width: @tablet-width) {
-  .information {
-    width: 250px;
-    margin: 0 auto;
-    padding-bottom: 31px;
-  }
-
   .information__list {
     border-bottom: 1px solid @grey;
+    margin: -4px 0;
   }
 
   .information__item {
     font-size: 16px;
-    padding: 10px 0 10px;
+    padding: 13px 0 10px;
   }
 }
 
@@ -31,6 +27,7 @@
   }
 
   .information__item {
-    padding: 9px 0 10px;
+    padding: 9px 0 6px;
+    line-height: 19px;
   }
 }
