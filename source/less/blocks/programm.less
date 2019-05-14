@@ -95,7 +95,16 @@
   text-transform: uppercase;
   margin: 0 0 0 -1px;
 
+  &:hover::after {
+    content: url("../img/icon-right-arrow-verylong.svg");
+  }
+
   &:active {
+    opacity: 0.5;
+  }
+
+  &:active::after {
+    content: url("../img/icon-right-arrow-verylong.svg");
     opacity: 0.5;
   }
 }
