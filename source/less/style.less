@@ -19,6 +19,14 @@
 @import "blocks/additionally.less";
 @import "blocks/main-nav.less";
 @import "blocks/address.less";
+@import "blocks/page-form.less";
+@import "blocks/form.less";
+@import "blocks/choice.less";
+@import "blocks/contacts.less";
+@import "blocks/data.less";
+@import "blocks/extra.less";
+@import "blocks/comment.less";
+@import "blocks/general.less";
 
 body {
   min-width: 320px;
@@ -75,4 +83,15 @@ button {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+fieldset {
+  border: none;
+}
+
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+  outline: none;
 }

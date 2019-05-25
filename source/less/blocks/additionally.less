@@ -3,7 +3,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
-  margin: 28px 0 35px 19px;
+  margin: 28px 0 35px;
   position: relative;
 }
 
@@ -14,7 +14,7 @@
   background-color: @green;
   position: absolute;
   top: 14px;
-  left: 248px;
+  left: 246px;
 }
 
 .additionally__product {
@@ -46,9 +46,19 @@
 }
 
 .additionally__order {
+  display: inline-block;
+  background-color: @green;
+  color: @white;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 280px;
+  height: 30px;
   margin: 10px 0 0 1px;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
+  padding: 10px 0 0;
 
   &:hover {
     background-color: @darkdreen;
@@ -64,11 +74,9 @@
   padding-top: 10px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-color: #64a83b;
-  background-position-y: 43%;
   width: 280px;
   height: 279px;
   background-repeat: no-repeat;
-  background-position-x: center;
   margin: 39px auto 35px;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -101,7 +109,7 @@
   .additionally__description h2 {
     font-size: 36px;
     line-height: 36px;
-    margin: 0 0 80px 46px;
+    margin: 0 0 80px 37px;
   }
 
   .additionally__description h2::after {
@@ -121,7 +129,7 @@
   }
 
   .additionally__products {
-    margin: 0 0 0 8px;
+    margin: 0;
   }
 
   .additionally__product {
@@ -144,7 +152,6 @@
 
   .additionally__order {
     width: 633px;
-    height: 40px;
     margin: 19px auto 0;
   }
 
@@ -163,7 +170,7 @@
     width: 708px;
     height: 200px;
     display: flex;
-    margin: 70px 0 55px 9px;
+    margin: 70px 0 55px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     background-color: #64a83b;
     background-repeat: no-repeat;
@@ -192,20 +199,25 @@
 
 @media (min-width: @desktop-width) {
   .additionally__description {
-    width: 1300px;
+    width: 1220px;
+    padding: 0 40px;
   }
 
   .additionally__description h2 {
-    margin: 0 0 80px 31px;
+    margin: 0 0 80px;
+  }
+
+  .additionally__description h2::before {
+    display: none;
   }
 
   .additionally__description h2::after {
-    width: 957px;
+    width: 885px;
   }
 
   .additionally__products {
     width: 895px;
-    margin: 0 0 0 -12px;
+    margin: 0;
   }
 
   .additionally__product {
@@ -239,7 +251,7 @@
   .additionally__picture {
     width: 245px;
     height: 290px;
-    margin: 0 5px 0 -3px;
+    margin: 0;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-color: #64a83b;
 

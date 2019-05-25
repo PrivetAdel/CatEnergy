@@ -1,22 +1,55 @@
 .programm__list {
-  margin: 21px 20px;
+  margin: 23px 20px;
 }
 
 .programm__item {
   width: 238px;
   background-color: @lightgrey;
-  padding: 21px 21px 18px 21px;
+  padding: 29px 21px 18px 21px;
   margin-bottom: 20px;
+  position: relative;
 }
 
-.programm__description--slim {
-  padding: 0;
-  margin: 12px -1px 22px;
+.programm__item--slim::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: @green;
+  border-radius: 150px;
+  width: 50px;
+  height: 50px;
+  left: 23px;
+  top: 24px;
 }
 
-.programm__description--pro {
-  padding: 0;
-  margin: 35px -1px 22px;
+.programm__item--slim::after {
+  content: url("../img/icon-cat-slim.svg");
+  display: block;
+  position: absolute;
+  width: 35px;
+  left: 30px;
+  top: 21px;
+}
+
+.programm__item--pro::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: @green;
+  border-radius: 150px;
+  width: 50px;
+  height: 50px;
+  left: 22px;
+  top: 25px;
+}
+
+.programm__item--pro::after {
+  content: url("../img/icon-cat-pro.svg");
+  display: block;
+  position: absolute;
+  width: 66px;
+  left: 14px;
+  top: 36px;
 }
 
 .programm__title {
@@ -26,65 +59,18 @@
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-}
-
-.programm__title--slim {
-  margin: -40px;
-  padding: 0 0 0 12px;
+  padding: 0 0 29px 0;
+  margin: 0 -11px 0 0;
 }
 
 .programm__title--pro {
-  margin: -42px;
-  padding: 0 0 0 39px;
+  margin: 2px -39px 0 0;
 }
 
-.programm__decor {
-  color: @grey;
-  size: 1px;
-  width: 240px;
-  margin: 0 -2px 19px;
-}
-
-.programm__title--slim::before {
-  content: "";
-  display: block;
-  position: relative;
-  background-color: @green;
-  border-radius: 150px;
-  width: 50px;
-  height: 50px;
-  left: 29px;
-  top: 44px;
-}
-
-.programm__title--slim::after {
-  content: url("../img/icon-cat-slim.svg");
-  display: block;
-  position: relative;
-  width: 35px;
-  left: 37px;
-  top: -45px;
-}
-
-.programm__title--pro::before {
-  content: "";
-  display: block;
-  position: relative;
-  background-color: @green;
-  border-radius: 150px;
-  width: 50px;
-  height: 50px;
-  left: 4px;
-  top: 45px;
-}
-
-.programm__title--pro::after {
-  content: url("../img/icon-cat-pro.svg");
-  display: block;
-  position: relative;
-  width: 66px;
-  left: -4px;
-  top: -32px;
+.programm__description {
+  padding: 0 0 22px;
+  margin: 0 0 19px;
+  border-bottom: 1px solid @grey;
 }
 
 .programm__button {
@@ -111,7 +97,7 @@
 
 .programm__button::after {
   content: url("../img/icon-right-arrow-long.svg");
-  margin-left: 13px;
+  margin-left: 12px;
 }
 
 @media (min-width: @tablet-width) {
@@ -124,72 +110,60 @@
 
   .programm__item {
     width: 600px;
-    padding: 0 54px 60px;
+    padding: 77px 54px 60px;
     margin: 0 auto 30px;
     display: flex;
     flex-direction: column;
   }
 
-  .programm__decor {
-    display: none;
+  .programm__item--slim::before {
+    width: 200px;
+    height: 200px;
+    left: 446px;
+    top: 93px;
+  }
+
+  .programm__item--slim::after {
+    width: 139px;
+    left: 477px;
+    top: 82px;
+  }
+
+  .programm__item--pro::before {
+    width: 200px;
+    height: 200px;
+    left: 448px;
+    top: 93px;
+  }
+
+  .programm__item--pro::after {
+    width: 268px;
+    left: 412px;
+    top: 136px;
   }
 
   .programm__title {
-    padding: 0;
+    padding: 0 0 26px 0;
     text-align: left;
     font-size: 36px;
   }
 
-  .programm__title--slim {
-    margin: -123px 0 0 -2px;
+  .programm__title--pro {
+    margin: 0;
   }
 
-  .programm__title--slim::before {
-    width: 200px;
-    height: 200px;
-    left: 394px;
-    top: 216px;
-  }
-
-  .programm__title--slim::after {
-    width: 139px;
-    left: 425px;
-    top: -32px;
-  }
-
-  .programm__description--slim {
+  .programm__description {
     width: 375px;
-    margin: -169px 0 0 -2px;
+    margin: 0 0 0 -2px;
     text-align: left;
     font-size: 16px;
     line-height: 24px;
     padding-bottom: 56px;
-  }
-
-  .programm__title--pro {
-    margin: -123px 0 0 -1px;
-  }
-
-  .programm__title--pro::before {
-    width: 200px;
-    height: 200px;
-    left: 396px;
-    top: 215px;
-  }
-
-  .programm__title--pro::after {
-    width: 268px;
-    left: 359px;
-    top: 22px;
+    border-bottom: none;
   }
 
   .programm__description--pro {
     width: 344px;
-    margin: -89px 0 0 -2px;
-    text-align: left;
-    font-size: 16px;
-    line-height: 24px;
-    padding-bottom: 56px;
   }
 
   .programm__button {
@@ -216,41 +190,48 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    padding: 0 50px 0;
+    padding: 77px 50px 0;
+  }
+
+  .programm__item--slim::before {
+    width: 100px;
+    height: 100px;
+    left: 52px;
+    top: 48px;
+  }
+
+  .programm__item--slim::after {
+    width: 71px;
+    left: 64px;
+    top: 42px;
+  }
+
+  .programm__item--pro::before {
+    width: 100px;
+    height: 100px;
+    left: 51px;
+    top: 48px;
+  }
+
+  .programm__item--pro::after {
+    width: 133px;
+    left: 34px;
+    top: 70px;
   }
 
   .programm__title {
-    width: 470px;
-    margin: -24px 0 0 165px;
+    width: 490px;
+    margin: 0;
+    padding: 0 0 99px 0;
+    text-align: center;
   }
 
-  .programm__title--slim::before {
-    width: 100px;
-    height: 100px;
-    left: -162px;
-    top: 72px;
+  .programm__title--pro {
+    margin: 0 0 0 22px;
+    padding: 0 0 57px 0;
   }
 
-  .programm__title--slim::after {
-    width: 71px;
-    left: -149px;
-    top: -71px;
-  }
-
-  .programm__title--pro::before {
-    width: 100px;
-    height: 100px;
-    left: -161px;
-    top: 72px;
-  }
-
-  .programm__title--pro::after {
-    width: 133px;
-    left: -179px;
-    top: -43px;
-  }
-
-  .programm__description--slim {
+  .programm__description {
     margin: -25px 0 0 3px;
     width: 470px;
     padding-bottom: 31px;
@@ -263,6 +244,7 @@
   }
 
   .programm__button {
+    width: 470px;
     margin: 0 0 0 3px;
     padding-bottom: 62px;
   }

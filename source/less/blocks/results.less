@@ -49,14 +49,17 @@
   text-align: center;
   padding: 0 66px;
   text-transform: uppercase;
+  width: 320px;
 }
 
 .results__cost p:first-child {
   margin: 12px 0 0 1px;
+  float: left;
 }
 
 .results__cost p:last-child {
-  margin: -20px -191px 0 0;
+  margin: 12px 0 0 2px;
+  float: right;
 }
 
 @media (min-width: @tablet-width) {
@@ -100,6 +103,10 @@
     text-align: right;
   }
 
+  .results__cost p:first-child {
+    margin: 12px 0 0 18px;
+  }
+
   .results__cost p:last-child {
     margin: 1px 0 0 0;
   }
@@ -115,17 +122,17 @@
   }
 
   .results__cost {
-    left: -950px;
+    left: -895px;
     top: 115px;
     width: 325px;
   }
 
   .results__cost p:first-child {
-    margin: 13px 95px 0 0;
+    margin: 13px 0 0;
   }
 
   .results__cost p:last-child {
-    margin: -27px -59px 0 0;
+    margin: 13px -3px 0 0;
   }
 
   .results__item {

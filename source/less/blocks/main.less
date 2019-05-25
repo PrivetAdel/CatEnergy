@@ -38,7 +38,7 @@
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 0 0 -2px;
+  margin: 0;
 }
 
 .main__picture {
@@ -49,6 +49,19 @@
 
 .main__choice {
   margin: 0 20px;
+  background-color: @green;
+  color: @white;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 242px;
+  height: 18px;
+  padding: 11px 19px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
 
   &:hover {
     background-color: @darkdreen;
@@ -78,10 +91,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-nav--closed {
-    height: 110px;
-  }
-
   .main__introduction {
     width: 768px;
     display: flex;
@@ -91,7 +100,7 @@
   }
 
   .main__wrapper {
-    width: 786px;
+    width: 768px;
   }
 
   .main__description {
@@ -100,16 +109,16 @@
     margin: 2px 0 0 117px;
     font-size: 60px;
     line-height: 60px;
-    width: 487px;
+    width: 535px;
   }
 
   .main__slogan {
     color: @black;
     text-align: left;
-    margin: 16px 0 0 118px;
+    margin: 16px auto 0;
     font-size: 20px;
     line-height: 20px;
-    width: 487px;
+    width: 530px;
   }
 
   .main__picture {
@@ -123,6 +132,11 @@
     position: relative;
     top: -584px;
     left: 98px;
+    font-size: 20px;
+    line-height: 20px;
+    width: 242px;
+    height: 19px;
+    padding: 16px 2px;
   }
 
   .main__programm {
@@ -154,6 +168,17 @@
     height: 461px;
     position: absolute;
     top: 577px;
+    z-index: -2;
+  }
+
+  .main__example::after {
+    content: "";
+    background: #eaeaea;
+    width: 50%;
+    height: 461px;
+    position: absolute;
+    top: 577px;
+    right: 0;
     z-index: -1;
   }
 }
@@ -162,7 +187,7 @@
   .main__introduction {
     display: flex;
     margin: 0 auto 349px;
-    width: 1220px;
+    width: 1300px;
     flex-wrap: wrap;
   }
 
@@ -172,11 +197,11 @@
     background-position: right center;
     background-repeat: no-repeat;
     background-color: #64a83b;
-    width: 56%;
+    width: 50%;
     height: 696px;
     position: absolute;
     top: 0;
-    right: -77px;
+    right: 0;
     z-index: -1;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -188,7 +213,7 @@
   }
 
   .main__wrapper {
-    width: 1300px;
+    width: 1220px;
     display: flex;
     flex-direction: column;
   }
@@ -211,6 +236,9 @@
   .main__choice {
     top: -190px;
     left: 59px;
+    width: 208px;
+    height: 20px;
+    padding: 16px 19px;
   }
 
   .main__programm {
@@ -231,6 +259,11 @@
   }
 
   .main__example::before {
+    top: 135px;
+  }
+
+  .main__example::after {
+    width: 25%;
     top: 135px;
   }
 }

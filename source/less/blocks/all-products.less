@@ -1,11 +1,22 @@
 .all-products {
   border: 1px solid @grey;
-  height: 430px;
-  width: 322px;
+  width: 278px;
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 0 20px 22px;
   background-color: @white;
+  margin: 0 auto;
+  position: relative;
+}
+
+.all-products::before {
+  content: url("../img/icon-plus-mobile.svg");
+  margin: 20px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 7px;
+  left: 124px;
 }
 
 .all-products__description {
@@ -16,7 +27,8 @@
   text-transform: uppercase;
   text-align: center;
   padding: 0;
-  margin: 47px 0 0 -68px;
+  margin: 80px 0 0;
+  width: 280px;
 }
 
 .all-products__slogan {
@@ -26,22 +38,20 @@
   margin: 8px 0 0;
 }
 
-.all-products__description::before {
-  content: url("../img/icon-plus-mobile.svg");
-  margin: 20px;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  top: -40px;
-  left: 135px;
-}
-
 .all-products__show {
   background-color: @lightgrey;
   color: @grey;
-  margin: 22px 0 0 21px;
+  margin: 22px 0 0 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 280px;
+  height: 30px;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
+  padding: 10px 0 0;
 
   &:hover {
     background-color: #ebebeb;
@@ -54,20 +64,24 @@
 }
 
 @media (min-width: @tablet-width) {
-  .all-products__description {
-    font-size: 20px;
-    margin: 164px 0 0 80px;
-    width: 165px;
-    position: relative;
+  .all-products {
+    margin: 0;
+    width: 282px;
   }
 
-  .all-products__description::before {
+  .all-products::before {
     content: url("../img/icon-plus.svg");
     width: 60px;
     height: 60px;
-    position: absolute;
-    top: -130px;
-    left: 32px;
+    top: 34px;
+    left: 112px;
+  }
+
+  .all-products__description {
+    font-size: 20px;
+    margin: 163px 0 0 59px;
+    width: 165px;
+    position: relative;
   }
 
   .all-products__slogan {
@@ -79,17 +93,24 @@
 
   .all-products__show {
     margin: 86px auto 0;
-    height: 40px;
+    width: 250px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .all-products {
-    width: 243px;
+    width: 203px;
+    height: 430px;
+    padding: 0 20px;
+  }
+
+  .all-products::before {
+    top: 33px;
+    left: 70px;
   }
 
   .all-products__description {
-    margin: 162px 0 0 40px;
+    margin: 162px 0 0 19px;
   }
 
   .all-products__slogan {
