@@ -1,25 +1,25 @@
 .form__data {
-  width: 100%;
+  width: 320px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .form__contacts {
-  width: 100%;
-  margin: 0;
+  width: 320px;
+  margin: 0 auto;
   padding: 0;
 }
 
 .form__comment {
-  width: 100%;
-  margin: 0;
+  width: 320px;
+  margin: 0 auto;
   padding: 0;
 }
 
 .form__extra {
-  width: 100%;
+  width: 320px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .form__wrapper {
@@ -40,6 +40,15 @@
   text-transform: uppercase;
   margin: 0 auto;
   padding: 10px 0;
+
+  &:hover {
+    background-color: @darkdreen;
+  }
+
+  &:active {
+    background-color: @darkdreen;
+    color: @lightgreen;
+  }
 }
 
 .form__wrapper p {
@@ -51,7 +60,20 @@
 
 @media (min-width: @tablet-width) {
   .form__data {
+    width: 768px;
     padding: 0 0 45px 0;
+  }
+
+  .form__contacts {
+    width: 768px;
+  }
+
+  .form__comment {
+    width: 768px;
+  }
+
+  .form__extra {
+    width: 768px;
   }
 
   .form__wrapper {
@@ -77,8 +99,21 @@
 
 @media (min-width: @desktop-width) {
   .form__data {
+    width: 1300px;
     border-bottom: none;
     padding: 0 0 60px 0;
+  }
+
+  .form__contacts {
+    width: 1300px;
+  }
+
+  .form__comment {
+    width: 1300px;
+  }
+
+  .form__extra {
+    width: 1300px;
   }
 
   .form__wrapper {

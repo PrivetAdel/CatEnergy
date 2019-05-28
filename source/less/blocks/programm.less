@@ -80,9 +80,16 @@
   font-weight: 400;
   text-transform: uppercase;
   margin: 0 0 0 -1px;
+  position: relative;
 
   &:hover::after {
     content: url("../img/icon-right-arrow-verylong.svg");
+    display: block;
+    height: 11px;
+    width: 33px;
+    position: absolute;
+    top: 3px;
+    left: 97px;
   }
 
   &:active {
@@ -91,13 +98,24 @@
 
   &:active::after {
     content: url("../img/icon-right-arrow-verylong.svg");
+    display: block;
+    height: 11px;
+    width: 33px;
+    position: absolute;
+    top: 3px;
+    left: 97px;
     opacity: 0.5;
   }
 }
 
 .programm__button::after {
   content: url("../img/icon-right-arrow-long.svg");
-  margin-left: 12px;
+  display: block;
+  height: 11px;
+  width: 24px;
+  position: absolute;
+  top: 3px;
+  left: 97px;
 }
 
 @media (min-width: @tablet-width) {
@@ -170,10 +188,21 @@
     margin: 0 0 0 -2px;
     font-size: 20px;
     line-height: 20px;
+
+    &:hover::after {
+      top: -4px;
+      left: 132px;
+    }
+
+    &:active::after {
+      top: -4px;
+      left: 132px;
+    }
   }
 
   .programm__button::after {
-    margin-left: 24px;
+    top: -4px;
+    left: 132px;
   }
 }
 

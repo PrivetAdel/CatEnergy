@@ -134,13 +134,20 @@
 
   .additionally__product {
     width: 706px;
-    border: 1px solid @grey;
+    border-top: 1px solid @grey;
+    border-left: 1px solid @grey;
+    border-right: 1px solid @grey;
+    border-bottom: none;
     background-color: @white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     border-collapse: collapse;
     padding: 12px 0 26px;
+  }
+
+  .additionally__product:last-child {
+    border-bottom: 1px solid @grey;
   }
 
   .additionally h3 {

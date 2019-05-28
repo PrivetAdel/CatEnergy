@@ -1,15 +1,76 @@
-/* cyrillic */
 @font-face {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: local("Oswald Regular"), local("Oswald-Regular"), url("https://fonts.gstatic.com/s/oswald/v17/TK3iWkUHHAIjg752HT8Ghe4.woff2") format("woff2");
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
 }
 
-/* latin */
 @font-face {
   font-family: "Oswald";
-  font-style: normal;
+  font-style: medium;
+  font-weight: 500;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Arial", sans-serif;
+  color: #111111;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 400;
-  src: local("Oswald Regular"), local("Oswald-Regular"), url("https://fonts.gstatic.com/s/oswald/v17/TK3iWkUHHAIjg752GT8G.woff2") format("woff2");
+
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: @white;
+}
+
+a {
+  text-decoration: none;
+  color: #111111;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+fieldset {
+  border: none;
+}
+
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+  outline: none;
 }
