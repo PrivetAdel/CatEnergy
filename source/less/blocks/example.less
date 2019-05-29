@@ -31,7 +31,6 @@
 .example__results {
   display: flex;
   margin: 0 auto 12px;
-  justify-content: space-between;
   flex-wrap: wrap;
   width: 320px;
 }
@@ -50,7 +49,7 @@
   top: 0;
 }
 
-.example__before {
+.example__picture picture:last-child {
   display: none;
 }
 
@@ -121,12 +120,13 @@
   .example__description {
     margin: 146px 0 0 1px;
     width: 439px;
-    padding: 0 0 68px 0;
+    padding: 0;
+    min-height: 97px;
   }
 
   .example__results {
     width: 1220px;
-    margin: 0;
+    margin: 68px 0 0;
   }
 
   .example__picture {
@@ -138,7 +138,7 @@
   }
 
   .example__picture img {
-    top: -497px;
+    top: -581px;
     left: 570px;
     width: 690px;
     height: 517px;

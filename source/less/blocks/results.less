@@ -26,7 +26,7 @@
   height: 54px;
   border: 1px solid @grey;
   border-radius: 1px;
-  margin: 22px 21px 0 0;
+  margin: 22px 0 0 11px;
   display: inline-block;
   text-align: center;
 }
@@ -89,22 +89,20 @@
   .results__time {
     width: 160px;
     height: 70px;
-    margin: 0 0 0 -151px;
+    margin: 0;
   }
 
   .results__cost {
     font-size: 20px;
     line-height: 28px;
-    width: 192px;
+    width: 341px;
     padding: 0;
-    position: relative;
-    top: -5px;
-    left: -1px;
     text-align: right;
+    flex-direction: column;
   }
 
   .results__cost p:first-child {
-    margin: 12px 0 0 18px;
+    margin: 7px 0 0;
   }
 
   .results__cost p:last-child {
@@ -113,18 +111,14 @@
 }
 
 @media (min-width: @desktop-width) {
-  .results__time {
-    margin: 0 0 0 -527px;
-  }
-
   .results__weight {
     margin: 0 42px 0 1px;
   }
 
   .results__cost {
-    left: -895px;
-    top: 115px;
-    width: 325px;
+    width: 1220px;
+    flex-direction: row;
+    padding: 43px 0 0;
   }
 
   .results__cost p:first-child {
@@ -132,7 +126,7 @@
   }
 
   .results__cost p:last-child {
-    margin: 13px -3px 0 0;
+    margin: 13px 0 0 63px;
   }
 
   .results__item {
