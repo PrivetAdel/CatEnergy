@@ -7,7 +7,7 @@
 }
 
 .choice label {
-  padding: 0 0 6px 46px;
+  padding: 0 0 6px 26px;
 }
 
 .choice label::before {
@@ -39,6 +39,10 @@
 
 .choice-radio:active + label {
   opacity: 0.7;
+}
+
+.choice-radio:focus + label::before {
+  border: 1px solid blue;
 }
 
 @media (min-width: @tablet-width) {

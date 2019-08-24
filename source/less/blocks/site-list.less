@@ -1,5 +1,5 @@
 .site-list__item a {
-  padding: 25px 0;
+  padding: 20px 60px 16px;
   text-align: center;
 }
 
@@ -21,6 +21,10 @@
   .site-list__item {
     border: none;
     padding: 0;
+  }
+
+  .site-list__item a {
+    padding: 20px 0 16px;
   }
 
   .site-list__item:first-child {
@@ -68,5 +72,9 @@
   .site-list__item--white::after {
     left: 2px;
     background: @white;
+  }
+
+  .site-list__item--active::after {
+    bottom: 79px;
   }
 }
