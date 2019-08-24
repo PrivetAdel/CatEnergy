@@ -1,12 +1,14 @@
 .main-nav__wrapper {
+  display: flex;
   width: 320px;
   margin: 0 auto;
+  justify-content: space-between;
+  position: relative;
 }
 
 .main-nav__logo {
-  float: left;
-  padding: 13px 20px 0;
-  width: 131px;
+  padding: 13px 20px 15px;
+  width: 200px;
   height: 38px;
 
   &:hover {
@@ -18,14 +20,26 @@
   }
 }
 
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .main-nav__toggle {
-  float: right;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  position: absolute;
+  top: 8px;
+  right: -11px;
+  margin-right: 40px;
 }
 
 .main-nav--closed .main-nav__toggle::before {
   content: "";
-  float: right;
-  margin: 23px 20px;
+  position: absolute;
   width: 24px;
   height: 2px;
   background-color: @black;
@@ -42,8 +56,7 @@
   display: block;
   width: 18px;
   height: 18px;
-  float: right;
-  margin: 23px;
+  padding: 14px;
 
   .main-nav--nojs .main-nav__toggle {
     display: none;
@@ -76,10 +89,6 @@
     padding: 25px 0;
     text-align: center;
   }
-}
-
-.main-nav__list {
-  padding-top: 65px;
 }
 
 @media (min-width: @tablet-width) {

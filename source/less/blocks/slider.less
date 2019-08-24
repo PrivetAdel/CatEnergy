@@ -1,9 +1,21 @@
 .slider__toggle {
+  border: none;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
+  border-bottom: 1px solid @lightgrey;
+  padding: 0;
+  background-color: transparent;
+}
+
+.slider__toggle:hover {
+  border-bottom: 1px solid @grey;
+}
+
+.slider__toggle:active {
+  border-bottom: 1px solid @lightgrey;
 }
 
 .slider__capsule {
@@ -32,14 +44,6 @@
     border-bottom: 1px dotted @grey;
   }
 
-  .slider__toggle:hover {
-    border-bottom: 1px solid @grey;
-  }
-
-  .slider__toggle:active {
-    border-bottom: none;
-  }
-
   .slider__capsule {
     border: none;
     width: 428px;
@@ -64,6 +68,8 @@
     }
 
     &:active {
+      height: 28px;
+      width: 28px;
       border: 2px solid @green;
     }
   }
@@ -75,7 +81,7 @@
     height: 8px;
     border-radius: 50%;
     position: absolute;
-    top: 10px;
+    top: 11px;
     left: 11px;
   }
 }
