@@ -38,10 +38,15 @@
   border: 1px solid #cecece;
   margin: 0 auto;
   width: 262px;
-}
 
-.comment textarea:active {
+  &:active {
   border: 1px solid #bcbcbc;
+  }
+
+  &:active,
+  &:focus {
+  border: 1px solid @black;
+  }
 }
 
 @media (min-width: @tablet-width) {
