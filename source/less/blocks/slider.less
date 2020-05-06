@@ -1,3 +1,48 @@
+.slider__wrapper {
+  user-select: none;
+}
+
+.slider__before,
+.slider__after {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.slider__images {
+  position: relative;
+  margin: 0;
+  width: 320px;
+  height: 240px;
+}
+
+.slider__image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.4s ease-out;
+}
+
+.slider__image img {
+  user-select: none;
+}
+
+.slider__image--after {
+  display: flex;
+  justify-content: flex-end;
+  width: 0;
+  right: 0;
+}
+
 .slider__toggle {
   border: none;
   font-family: "Oswald", "Arial", sans-serif;
@@ -8,6 +53,7 @@
   border-bottom: 1px solid @lightgrey;
   padding: 0;
   background-color: transparent;
+  user-select: none;
 }
 
 .slider__toggle:hover {
@@ -18,86 +64,118 @@
   border-bottom: 1px solid @lightgrey;
 }
 
-.slider__capsule {
+.slider__scale {
   display: block;
-  width: 85px;
-  height: 13px;
-  border: 1px solid @grey;
-  border-radius: 10px;
-  background-color: @white;
+  align-items: center;
+  padding: 3px 4px;
   margin: 2px 18px 0 18px;
+  width: 85px;
+  height: 14px;
+  border-radius: 6px;
+  background-color: @white;
+  border: 1px solid @grey;
+  box-sizing: border-box;
 }
 
-.slider__circle {
-  position: absolute;
-  top: 7px;
-  left: 64px;
-  height: 5px;
-  width: 34px;
-  border-radius: 20%;
+.slider__grip {
+  flex-shrink: 0;
+  display: block;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
   background-color: @green;
+  cursor: pointer;
+  transition: 0.35s ease-out;
+}
+
+.slider__before:checked ~ .slider .slider__grip {
+  margin-left: 0;
+  transition: .7s all;
+}
+
+.slider__after:checked ~ .slider .slider__grip {
+  margin-left: calc(100% - 34px);
+  transition: .7s all;
+}
+
+.slider__before:checked ~ .slider__images .slider__image--before,
+.slider__after:checked ~ .slider__images .slider__image--after {
+  width: 100%;
+  transition: 2.5s ease-in-out;
+}
+
+.slider__before:checked ~ .slider__images .slider__image--after,
+.slider__after:checked ~ .slider__images .slider__image--before {
+  width: 0;
+  transition: 2.5s ease-in-out;
 }
 
 @media (min-width: @tablet-width) {
+  .slider__images {
+    margin: 80px 0 0;
+    width: 680px;
+    height: 517px;
+  }
+
+  .slider__image {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .slider__image img {
+    width: 680px;
+    height: auto;
+  }
+
+  .slider__image--after {
+    align-items: flex-end;
+  }
+
+  .example__after {
+    z-index: 1;
+  }
+
   .slider__toggle {
     font-size: 20px;
     border-bottom: 1px dotted @grey;
+    padding-bottom: 4px;
   }
 
-  .slider__capsule {
-    border: none;
+  .slider__scale {
+    padding: 4px 0;
     width: 428px;
     height: 6px;
     background-color: @grey;
-    margin: 16px -13px 0 24px;
+    border-color: @grey;
   }
 
-  .slider__circle {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+  .slider__grip {
+    margin-left: calc(50% - 12px);
+    width: 34px;
+    height: 34px;
+    background-image: radial-gradient(@green 0, @green 4px, @white 5px, @white 100%);
     border: 1px solid @grey;
-    background-color: @white;
-    position: relative;
-    top: 2px;
-    left: -410px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    margin-top: -17px;
 
     &:hover {
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
     }
 
     &:active {
-      height: 28px;
-      width: 28px;
-      border: 2px solid @green;
+      border: 1px solid @green;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
     }
-  }
-
-  .slider__circle::before {
-    content: "";
-    background-color: @green;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    position: absolute;
-    top: 11px;
-    left: 11px;
-  }
-
-  .slider__circle:active .slider__circle::before {
-    top: 10px;
-    left: 10px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .slider__capsule {
-    margin: 16px -15px 0 24px;
-  }
-
-  .slider__circle {
-    top: 0;
-    left: -411px;
+  .slider__wrapper {
+    position: absolute;
+    bottom: 0;
+    right: -52px;
   }
 }

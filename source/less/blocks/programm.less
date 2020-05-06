@@ -80,45 +80,63 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 1px;
+  text-decoration: none;
+  color: @black;
   text-transform: uppercase;
-  margin: 0 0 0 -1px;
-  position: relative;
+  border-left: 0;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    transition: all 0.2s ease-out;
+  }
+
+  &::before {
+    order: 1;
+    margin-left: 10px;
+    width: 19px;
+    height: 3px;
+    background-color: @darkgrey;
+  }
+
+  &::after {
+    order: 2;
+    border: 5.5px solid transparent;
+    border-left-color: @darkgrey;
+  }
+
+  &:hover::before {
+    width: 27px;
+    background-color: @green;
+  }
 
   &:hover::after {
-    content: url("../img/icon-right-arrow-verylong.svg");
-    display: block;
-    height: 11px;
-    width: 33px;
-    position: absolute;
-    top: 3px;
-    left: 97px;
+    border-left-color: @green;
+  }
+
+  &:hover {
+    color: @green;
   }
 
   &:active {
-    opacity: 0.5;
+    opacity: 0.3;
+    transition: none;
+  }
+
+  &:active::before {
+    background-color: @green;
   }
 
   &:active::after {
-    content: url("../img/icon-right-arrow-verylong.svg");
-    display: block;
-    height: 11px;
-    width: 33px;
-    position: absolute;
-    top: 3px;
-    left: 97px;
-    opacity: 0.5;
+    border-left-color: @green;
   }
 }
 
-.programm__button::after {
-  content: url("../img/icon-right-arrow-long.svg");
-  display: block;
-  height: 11px;
-  width: 24px;
-  position: absolute;
-  top: 3px;
-  left: 97px;
-}
 
 @media (min-width: @tablet-width) {
   .programm__list {
@@ -190,21 +208,6 @@
     margin: 0 0 0 -2px;
     font-size: 20px;
     line-height: 20px;
-
-    &:hover::after {
-      top: -4px;
-      left: 132px;
-    }
-
-    &:active::after {
-      top: -4px;
-      left: 132px;
-    }
-  }
-
-  .programm__button::after {
-    top: -4px;
-    left: 132px;
   }
 }
 

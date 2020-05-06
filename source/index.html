@@ -16,7 +16,7 @@
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="page-header">
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--nojs">
         <div class="main-nav__wrapper">
           <a class="main-nav__logo logo">
             <picture>
@@ -25,7 +25,10 @@
               <img class="logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Кэт энерджи">
             </picture>
           </a>
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть/Скрыть меню</span>
+            <span class="toggle__btn"></span>
+          </button>
         </div>
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--white site-list__item--active">
@@ -109,29 +112,37 @@
             </div>
             <div class="results__cost"><p>Затраты на питание:</p><p>15 000 руб.</p></div>
           </div>
-          <div class="example__picture">
-            <picture>
-              <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-              <img src="img/before-mobile@1x.png" width="320" height="240" srcset="img/before-mobile@2x.png 2x" alt="Было">
-            </picture>
-            <picture>
-              <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/after-mobile.webp 1x, img/after-mobile@2x.webp 2x">
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-              <img class="example__after" src="img/after-mobile@1x.png" width="320" height="240" srcset="img/after-mobile@2x.png 2x" alt="Стало">
-            </picture>
-          </div>
-          <div class="example__toggles slider">
-            <button class="slider__toggle" type="button">Было</button>
-            <input class="slider__checkbox" type="checkbox" id="hidcheck" hidden="">
-              <label class="slider__capsule" for="hidcheck" id="capsule-id"></label>
-              <div class="slider__circle"></div>
-              <button class="slider__toggle" type="button">Стало</button>
+          <div class="slider__wrapper">
+            <input type="radio" id="before" class="slider__before" name="image-toggle">
+            <input type="radio" id="after" class="slider__after" name="image-toggle">
+            <div class="slider__images">
+              <div class="slider__image slider__image--before">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="example__before" src="img/before-mobile@1x.png" width="320" height="240" srcset="img/before-mobile@2x.png 2x" alt="Было">
+                </picture>
+              </div>
+              <div class="slider__image slider__image--after">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="example__after" src="img/after-mobile@1x.png" width="320" height="240" srcset="img/after-mobile@2x.png 2x" alt="Стало">
+                </picture>
+              </div>
+            </div>
+            <div class="example__toggles slider">
+              <label for="before" class="slider__toggle before">Было</label>
+              <div class="slider__scale">
+                <div class="slider__grip"></div>
+              </div>
+              <label for="after" class="slider__toggle after">Стало</label>
+            </div>
           </div>
         </div>
       </section>
@@ -148,15 +159,6 @@
         </div>
       </section>
       <div id="map" class="page-footer__maps">
-        <!--<iframe class="page-footer__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A43b623fa3211db05ff4e3d1e49115d75ba27096d13ec60216d7ee797369413c9&amp;source=constructor" width="320" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <picture>
-          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile.webp 1x, img/bg-map-mobile@2x.webp 2x">
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-          <img src="img/bg-map-mobile@1x.png" width="320" height="360" srcset="img/bg-map-mobile@2x.png 2x" alt="Карта">
-        </picture>-->
         <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1501ab5b20eeb93e984aca0edca3cc8147dd74020209e2ea893e837d8e94acfb&amp;lang=ru_RU&amp;scroll=true;id=map">
         </script>
       </div>
@@ -196,5 +198,7 @@
       </section>
     </footer>
     <script async="" src=js/menu.js></script>
+    <script async="" src=js/slider.js></script>
+    </script>
   </body>
 </html>

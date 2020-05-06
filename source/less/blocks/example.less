@@ -15,13 +15,6 @@
   width: 280px;
 }
 
-.example__toggles {
-  display: flex;
-  margin: 2px auto;
-  width: 200px;
-  position: relative;
-}
-
 .example__description {
   padding: 0 20px;
   width: 270px;
@@ -35,28 +28,13 @@
   width: 320px;
 }
 
-.example__picture {
-  margin: 22px 0 0;
-  display: block;
-  height: 270px;
-  position: relative;
-}
-
-.example__picture img {
-  width: 320px;
-  height: 240px;
-  position: absolute;
-  top: 0;
-}
-
-.example__picture picture:last-child {
-  display: none;
-}
-
 @media (min-width: @tablet-width) {
   .example__wrapper {
     width: 768px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .example__title {
@@ -81,27 +59,14 @@
     width: 708px;
   }
 
-  .example__picture {
-    width: 708px;
-    padding-top: 91px;
-    margin: 0 auto 165px;
-  }
-
-  .example__picture img {
-    width: 690px;
-    height: auto;
-    top: 87px;
-    left: 16px;
-  }
-
-  .example__toggles {
-    display: flex;
-    margin: -3px auto 58px;
-    position: relative;
-    top: 92px;
-    left: -2px;
-    width: 568px;
-  }
+  // .example__toggles {
+  //   display: flex;
+  //   margin: -3px auto 58px;
+  //   position: relative;
+  //   top: 92px;
+  //   left: -2px;
+  //   width: 568px;
+  // }
 }
 
 @media (min-width: @desktop-width) {
@@ -114,6 +79,7 @@
   .example__title {
     margin: 0 0 0 1px;
     padding: 0;
+    align-self: flex-start;
   }
 
   .example__description {
@@ -121,31 +87,19 @@
     width: 439px;
     padding: 0;
     min-height: 97px;
+    align-self: flex-start;
   }
 
   .example__results {
     width: 1220px;
     margin: 68px 0 0;
+    align-self: flex-start;
   }
 
-  .example__picture {
-    width: 690px;
-    margin: 0;
-    padding: 0;
-    height: 0;
-  }
-
-  .example__picture img {
-    top: -581px;
-    left: 570px;
-    width: 690px;
-    height: 517px;
-  }
-
-  .example__toggles {
-    position: absolute;
-    top: 497px;
-    left: 649px;
-    margin: 0;
-  }
+  // .example__toggles {
+  //   position: absolute;
+  //   top: 497px;
+  //   left: 649px;
+  //   margin: 0;
+  // }
 }

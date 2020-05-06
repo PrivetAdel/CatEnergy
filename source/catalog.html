@@ -16,7 +16,7 @@
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="page-header">
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--nojs">
         <div class="main-nav__wrapper">
           <a class="main-nav__logo logo" href="index.html">
             <picture>
@@ -25,7 +25,10 @@
               <img class="logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Кэт энерджи">
             </picture>
           </a>
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть/Скрыть меню</span>
+            <span class="toggle__btn"></span>
+          </button>
         </div>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
