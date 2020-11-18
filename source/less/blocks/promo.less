@@ -1,0 +1,70 @@
+.promo {
+  position: relative;
+}
+
+.promo__background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-color: #64a83b;
+  height: 306px;
+  z-index: -1;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .main__introduction {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      height: 306px;
+    }
+  }
+}
+
+.promo__wrapper {
+  padding: 20px;
+  text-align: center;
+}
+
+.promo__title {
+  color: @white;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  margin: 8px auto 25px;
+  max-width: 250px;
+}
+
+.promo__slogan {
+  color: @white;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.promo__picture {
+  width: 280px;
+  height: 270px;
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
+}
+
+.promo__choose-program {
+  background-color: @green;
+  color: @white;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 11px;
+  display: block;
+  text-align: center;
+
+  &:hover {
+    background-color: @darkdreen;
+  }
+
+  &:active {
+    background-color: @darkdreen;
+    color: @lightgreen;
+  }
+}

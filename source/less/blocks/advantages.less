@@ -1,35 +1,42 @@
+.advantages {
+  padding: 20px;
+}
+
 .advantages__title {
-  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
-  padding: 20px;
+  margin: 0 0 20px 0;
+}
+
+.advantages__list {
+  padding: 0;
   margin: 0;
 }
 
 .advantages__item {
   display: flex;
-}
-
-.advantages__list {
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  margin-top: -3px;
+  height: 60px;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .advantages__description {
-  width: 200px;
-  padding: 0 0 0 20px;
-  margin: 12px 0 0;
+  font-family: "Arial", sans-serif;
+  padding: 0 0 0 80px;
+  margin: 0;
 }
 
-.advantages__picture--sheet {
+.advantages__item--sheet::before {
+  content: "";
+  position: absolute;
   background-image: url("../img/advantage-leaf@1x.png");
   background-color: @green;
   width: 60px;
   height: 60px;
-  margin: 9px 0;
+  top: 0;
+  left: 0;
   background-position: center center;
   background-repeat: no-repeat;
 
@@ -41,12 +48,15 @@
   }
 }
 
-.advantages__picture--powder {
+.advantages__item--powder::before {
+  content: "";
+  position: absolute;
   background-image: url("../img/advantage-powder@1x.png");
   background-color: @green;
   width: 60px;
   height: 60px;
-  margin: 10px 0;
+  top: 0;
+  left: 0;
   background-position: center center;
   background-repeat: no-repeat;
 
@@ -58,12 +68,15 @@
   }
 }
 
-.advantages__picture--cutlery {
+.advantages__item--cutlery::before {
+  content: "";
+  position: absolute;
   background-image: url("../img/advantage-dining@1x.png");
   background-color: @green;
   width: 60px;
   height: 60px;
-  margin: 10px 0;
+  top: 0;
+  left: 0;
   background-position: center center;
   background-repeat: no-repeat;
 
@@ -75,12 +88,15 @@
   }
 }
 
-.advantages__picture--scales {
+.advantages__item--scales::before {
+  content: "";
+  position: absolute;
   background-image: url("../img/advantage-clock@1x.png");
   background-color: @green;
   width: 60px;
   height: 60px;
-  margin: 10px 0 0;
+  top: 0;
+  left: 0;
   background-position: center center;
   background-repeat: no-repeat;
 

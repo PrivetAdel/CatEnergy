@@ -1,13 +1,10 @@
 .main-nav__wrapper {
   display: flex;
-  width: 320px;
-  margin: 0 auto;
-  justify-content: space-between;
   position: relative;
+  padding: 15px 20px;
 }
 
 .main-nav__logo {
-  padding: 13px 20px 15px;
   width: 200px;
   height: 38px;
 
@@ -34,7 +31,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 4px;
+  top: 5px;
   right: 0;
   display: flex;
   justify-content: center;
@@ -48,61 +45,58 @@
   border: 0;
   user-select: none;
   margin: 0;
-  border-radius: 0;
-  font-size: 0;
-  line-height: 0;
   outline: none;
   cursor: pointer;
 }
 
-.toggle__btn {
+.main-nav__btn {
   position: relative;
   display: inline-block;
   width: 26px;
   height: 2px;
   vertical-align: bottom;
-  background: #000000;
-  transition: background 0.7s 0.7s;
+  background: @black;
+  transition: background 0.7s;
 }
 
-.toggle__btn::after,
-.toggle__btn::before {
+.main-nav__btn::after,
+.main-nav__btn::before {
   content: "";
   position: absolute;
   left: 0;
   width: 100%;
   height: 2px;
-  background: #000000;
-  transform-origin: 50% 50%;
-  transition: top 0.5s 0.5s, transform 0.5s;
+  background: @black;
+  transform-origin: 50%;
+  transition: top 0.5s, transform 0.5s;
 }
 
-.toggle__btn::after {
+.main-nav__btn::after {
   top: -8px;
 }
 
-.toggle__btn::before {
+.main-nav__btn::before {
   top: 8px;
 }
 
-.main-nav--opened .toggle__btn::before {
+.main-nav--opened .main-nav__btn::before {
   transform: rotate3d(0, 0, 1, 45deg);
 }
 
-.main-nav--opened .toggle__btn::after,
-.main-nav--opened .toggle__btn::before {
+.main-nav--opened .main-nav__btn::after,
+.main-nav--opened .main-nav__btn::before {
   top: 0;
   transition: top 0.3s, transform 0.3s 0.5s;
   width: 28px;
 }
 
-.main-nav--opened .toggle__btn::after {
+.main-nav--opened .main-nav__btn::after {
   transform: rotate3d(0, 0, 1, -45deg);
 }
 
-.main-nav--opened .toggle__btn {
+.main-nav--opened .main-nav__btn {
   background: 0 0;
-  transition: background 0.01s 0.01s;
+  transition: background 0.01s;
 }
 
 .main-nav--nojs .site-list__item {

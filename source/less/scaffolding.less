@@ -14,13 +14,17 @@
   src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   min-width: 320px;
   margin: 0;
   padding: 0;
 
-  font-family: "Arial", sans-serif;
-  color: #111111;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: @black;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -32,7 +36,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #111111;
+  color: @black;
 }
 
 .visually-hidden:not(:focus):not(:active) {
