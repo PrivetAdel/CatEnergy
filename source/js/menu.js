@@ -1,10 +1,10 @@
-const nav = document.querySelector(`.main-nav`);
-const toggle = nav.querySelector(`.main-nav__toggle`);
+const nav = document.querySelector(`.header__nav`);
+const toggle = nav.querySelector(`.header__toggle`);
 
-nav.classList.remove(`main-nav--nojs`);
+nav.classList.remove(`header__nav--nojs`);
 
 function onToggleClick() {
-  nav.classList.toggle(`main-nav--opened`);
+  nav.classList.toggle(`header__nav--opened`);
 }
 
 toggle.addEventListener(`click`, onToggleClick);

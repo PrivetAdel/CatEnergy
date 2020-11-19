@@ -40,7 +40,7 @@
   color: @white;
   line-height: 14px;
   text-transform: uppercase;
-  text-align: center;
+  margin-bottom: 29px;
 }
 
 .promo__picture {
@@ -54,10 +54,11 @@
   background-color: @green;
   color: @white;
   text-transform: uppercase;
-  width: 100%;
   padding: 11px;
   display: block;
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 
   &:hover {
     background-color: @darkdreen;
@@ -66,5 +67,46 @@
   &:active {
     background-color: @darkdreen;
     color: @lightgreen;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .promo__wrapper {
+    padding-bottom: 0;
+  }
+
+  .promo__background {
+    display: none;
+  }
+
+  .promo__title {
+    color: @black;
+    font-size: 60px;
+    line-height: 60px;
+    margin: 10px 97px;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .promo__slogan {
+    color: @black;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 40px 97px 20px;
+    text-align: left;
+  }
+
+  .promo__picture {
+    width: 720px;
+    height: 610px;
+  }
+
+  .promo__choose-program {
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+    padding: 15px 26px;
+    top: 260px;
+    left: 119px;
   }
 }

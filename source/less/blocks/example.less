@@ -4,7 +4,7 @@
 }
 
 .example__wrapper {
-  padding: 0 20px;
+  padding: 0 20px 25px;
 }
 
 .example__title {
@@ -16,12 +16,13 @@
 
 .example__description {
   font-family: "Arial", sans-serif;
-  margin: 20px 0 25px;
+  margin: 23px 0;
 }
 
 .example__statistic {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .example__item {
@@ -40,6 +41,7 @@
 }
 
 .example__label {
+  font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
   background-color: @lightgrey;
@@ -57,37 +59,58 @@
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+  margin: 9px auto;
 }
 
 @media (min-width: @tablet-width) {
+  .example {
+    background-color: @white;
+    padding-bottom: 0;
+  }
+
   .example__wrapper {
-    width: 768px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 0 30px;
   }
 
   .example__title {
     font-size: 60px;
     line-height: 60px;
-    text-align: left;
-    padding: 0 0 70px 0;
-    margin: -50px 0 0 30px;
-    width: 708px;
+    margin-bottom: 65px;
   }
 
   .example__description {
     font-size: 16px;
     line-height: 24px;
-    width: 690px;
-    padding: 0 0 53px 0;
-    margin: -6px 0 0 29px;
+    padding: 0;
+    margin: 0 0 50px;
   }
 
-  .example__results {
-    margin: 0 auto;
-    width: 708px;
+  .example__item {
+    width: 23%;
+    margin-right: 41px;
+  }
+
+  .example__value {
+    font-size: 30px;
+    line-height: 37px;
+    padding: 18px 0;
+  }
+
+  .example__label {
+    font-size: 14px;
+    background-color: @white;
+    margin: 0 10px;
+    padding: 0 3px;
+    transform: translateY(-10px);
+  }
+
+  .example__cost {
+    font-size: 20px;
+    line-height: 28px;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-grow: 1;
+    justify-content: flex-start;
   }
 }
 

@@ -4,7 +4,9 @@
 
 .contacts__wrapper {
   display: flex;
-  padding: 30px 20px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 29px 11px 27px;
 }
 
 .contacts__title {
@@ -12,12 +14,14 @@
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 400;
+  margin: 0;
 }
 
 .contacts__address {
   font-family: "Arial", sans-serif;
   line-height: 20px;
-  width: 50%;
+  margin: 0;
+  margin-right: 5px;
 }
 
 .contacts__map {
@@ -30,35 +34,31 @@
 }
 
 @media (min-width: @tablet-width) {
-  .address__wrapper {
-    width: 626px;
-    margin: 0 auto;
-    padding: 0 71px;
+  .contacts__wrapper {
+    padding: 65px 71px 59px;
+    justify-content: space-between;
   }
 
-  .address__align {
-    width: 708px;
-  }
-
-  .address__slogan {
+  .contacts__title {
     font-size: 20px;
     line-height: 25px;
-    width: 155px;
-    padding: 65px 0 20px 0;
   }
 
-  .address__adds {
+  .contacts__address {
     font-size: 16px;
-    margin: 63px 0 20px 0;
+    margin: 0;
     text-align: right;
     padding: 0;
-    width: 155px;
+
+    span {
+      display: block;
+      margin-top: 19px;
+    }
   }
 
-  .address__city {
-    font-size: 16px;
-    margin: 123px -154px 0 0;
-    text-align: right;
+  .contacts__map {
+    height: 395px;
+    background-image: url("../img/bg-map-tablet@1x.webp");
   }
 }
 

@@ -16,29 +16,29 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="page-header">
-      <nav class="main-nav main-nav--nojs">
-        <div class="main-nav__wrapper">
-          <a class="main-nav__logo">
+    <header class="header">
+      <nav class="header__nav header__nav--nojs">
+        <div class="header__wrapper">
+          <a class="header__logo">
             <picture>
               <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
               <img src="img/logo-mobile.svg" width="191" height="38" alt="Кэт энерджи">
             </picture>
           </a>
-          <button class="main-nav__toggle" type="button">
+          <button class="header__toggle" type="button">
             <span class="visually-hidden">Открыть/Скрыть меню</span>
-            <span class="main-nav__btn"></span>
+            <span class="header__btn"></span>
           </button>
         </div>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--white site-list__item--active">
+        <ul class="header__list">
+          <li class="header__item header__item--active">
             <a href="#">Главная</a>
           </li>
-          <li class="site-list__item site-list__item--white">
+          <li class="header__item">
             <a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="site-list__item site-list__item--white">
+          <li class="header__item">
             <a href="form.html">Подбор программы</a>
           </li>
         </ul>
@@ -50,7 +50,7 @@
       <section class="promo">
         <div class="promo__background"></div>
         <div class="promo__wrapper">
-          <h2 class="promo__title">Функциональное питание для котов</h2>
+          <h2 class="promo__title">Функциональное питание&nbsp;для&nbsp;котов</h2>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <picture>
             <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@1x.webp 2x">
@@ -73,7 +73,7 @@
           </li>
           <li class="programm__item programm__item--pro">
             <h4 class="programm__title programm__title--pro">Набор массы</h4>
-            <p class="programm__description programm__description--pro">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <p class="programm__description programm__description--pro">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы! мышцы!</p>
             <a class="programm__link" href="catalog.html">Каталог pro</a>
           </li>
         </ul>
@@ -102,7 +102,7 @@
       <section class="example">
         <div class="example__wrapper">
           <h3 class="example__title">Живой пример</h3>
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по&nbsp;-&nbsp;прежнему спит по 16 часов в день.</p>
           <div class="example__statistic">
             <div class="example__item">
               <div class="example__value">5 кг</div>
@@ -112,9 +112,10 @@
               <div class="example__value">60 дней</div>
               <div class="example__label">затрачено времени</div>
             </div>
-          </div>
-          <div class="example__cost">
-            <p>Затраты на питание:</p><p>&#8194;15 000 руб.</p>
+            <div class="example__cost">
+              <span>Затраты на питание:</span>
+              <span>&#8194;15 000 руб.</span>
+            </div>
           </div>
         </div>
         <div class="slider">
@@ -155,8 +156,8 @@
     <footer class="footer">
       <section class="contacts">
         <div class="contacts__wrapper">
-          <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
-          <p class="contacts__address">ул.&nbsp;Большая Конюшенная,&nbsp;д.&nbsp;19/8 Санкт-Петербург</p>
+          <h3 class="contacts__title">Приглашаем<br>к&nbsp;сотрудничеству<br>дилеров!</h3>
+          <p class="contacts__address">ул.&nbsp;Большая<br>Конюшенная,&nbsp;д.&nbsp;19/8 <br><span>Санкт-Петербург</span></p>
         </div>
         <div id="map" class="contacts__map">
           <!-- <script type="text/javascript" charset="utf-8" async="" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1501ab5b20eeb93e984aca0edca3cc8147dd74020209e2ea893e837d8e94acfb&amp;lang=ru_RU&amp;scroll=true;id=map">
@@ -166,7 +167,7 @@
 
       <section class="info">
         <div class="info__logotype">
-          <a>
+          <a class="info__logotype-link">
             <svg width="130" height="28"><use xlink:href="#icon-logo-footer"></use></svg>
           </a>
         </div>
@@ -174,18 +175,18 @@
           <ul class="info__list">
             <li class="info__item">
               <a class="info__social-link" href="https://vk.com/htmlacademy">
-                <svg class="info__icon" width="21" height="14"><use xlink:href="#icon-vk"></use></svg>
+                <svg class="info__icon info__icon--vk" width="21" height="14"><use xlink:href="#icon-vk"></use></svg>
                 <span class="visually-hidden">Вконтакте</span></a>
             </li>
             <li class="info__item">
               <a class="info__social-link" href="https://www.instagram.com/htmlacademy">
-                <svg class="info__icon" width="17" height="16"><use xlink:href="#icon-insta"></use></svg>
+                <svg class="info__icon info__icon--instagram" width="17" height="16"><use xlink:href="#icon-insta"></use></svg>
                 <span class="visually-hidden">Инстаграм</span>
               </a>
             </li>
             <li class="info__item">
               <a class="info__social-link" href="https://www.facebook.com/htmlacademy">
-                <svg class="info__icon" width="13" height="20"><use xlink:href="#icon-fb"></use></svg>
+                <svg class="info__icon info__icon--fb" width="13" height="20"><use xlink:href="#icon-fb"></use></svg>
                 <span class="visually-hidden">Фейсбук</span>
               </a>
             </li>
@@ -193,7 +194,7 @@
         </div>
         <div class="info__copyright">
           <a class="info__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><span>HTML Academy</span>
-            <svg class="info__icon" width="40" height="54"><use xlink:href="#icon-htmlacademy"></use></svg>
+            <svg class="info__copyright-icon" width="40" height="54"><use xlink:href="#icon-htmlacademy"></use></svg>
           </a>
         </div>
       </section>

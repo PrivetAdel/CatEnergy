@@ -4,9 +4,9 @@
 
 .advantages__title {
   font-size: 36px;
-  line-height: 60px;
+  line-height: 54px;
   font-weight: 400;
-  margin: 0 0 20px 0;
+  margin: 0 0 30px 0;
 }
 
 .advantages__list {
@@ -109,115 +109,60 @@
 }
 
 @media (min-width: @tablet-width) {
-  .advantages__wrapper {
-    width: 768px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+  .advantages {
+    padding: 47px 30px 7px;
+    border-bottom: 1px solid @lightgrey;
+    margin-bottom: 23px;
   }
 
   .advantages__title {
     font-size: 60px;
-    text-align: left;
-    width: 708px;
-    padding: 0 0 68px 0;
-    margin: 0 auto;
+    margin-bottom: 76px;
   }
 
   .advantages__list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 708px;
-    padding: 0 0 0 29px;
-    justify-content: space-between;
-  }
-
-  .advantages__item:nth-child(3),
-  .advantages__item:nth-child(4) {
-    padding-bottom: 66px;
-    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 55px;
+    grid-row-gap: 35px;
+    counter-reset: item_number;
   }
 
   .advantages__item {
-    width: 324px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding-bottom: 98px;
-    margin: 7px 0;
-  }
-
-  .advantages__picture--sheet,
-  .advantages__picture--powder,
-  .advantages__picture--cutlery,
-  .advantages__picture--scales {
-    width: 80px;
-    height: 80px;
+    height: 280px;
     margin: 0;
-  }
+    padding: 15px 0 0;
+    counter-increment: item_number;
 
-  .advantages__picture--sheet::after {
-    content: "1";
-    color: @lightgrey;
-    font-family: "Oswald", "Arial", sans-serif;
-    font-size: 281.07px;
-    line-height: 281.07px;
-    font-weight: 400;
-    position: relative;
-    top: -38px;
-    left: 120px;
-    opacity: 0.5;
-    z-index: -1;
-  }
+    &--sheet::before,
+    &--powder::before,
+    &--cutlery::before,
+    &--scales::before {
+      width: 80px;
+      height: 80px;
+      margin: 0;
+    }
 
-  .advantages__picture--powder::after {
-    content: "2";
-    color: @lightgrey;
-    font-family: "Oswald", "Arial", sans-serif;
-    font-size: 281.07px;
-    line-height: 281.07px;
-    font-weight: 400;
-    position: relative;
-    top: -38px;
-    left: 112px;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  .advantages__picture--cutlery::after {
-    content: "3";
-    color: @lightgrey;
-    font-family: "Oswald", "Arial", sans-serif;
-    font-size: 281.07px;
-    line-height: 281.07px;
-    font-weight: 400;
-    position: relative;
-    top: -38px;
-    left: 112px;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  .advantages__picture--scales::after {
-    content: "4";
-    color: @lightgrey;
-    font-family: "Oswald", "Arial", sans-serif;
-    font-size: 281.07px;
-    line-height: 281.07px;
-    font-weight: 400;
-    position: relative;
-    top: -38px;
-    left: 112px;
-    opacity: 0.5;
-    z-index: -1;
+    &::after {
+      content: counter(item_number);
+      position: absolute;
+      top: -17px;
+      right: 80px;
+      min-width: 136px;
+      font-size: 281px;
+      line-height: 235px;
+      font-family: "Oswald","Arial",sans-serif;
+      color: @lightgrey;
+      z-index: -1;
+      text-align: center;
+    }
   }
 
   .advantages__description {
     font-size: 16px;
     line-height: 24px;
-    width: 245px;
-    padding: 21px 0;
-    margin: 11px 0 0;
+    padding: 0 80px 0 0;
   }
 }
 
