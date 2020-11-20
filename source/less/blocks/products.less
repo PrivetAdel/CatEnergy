@@ -1,0 +1,168 @@
+.product__wrapper {
+  display: flex;
+}
+
+.product__image {
+  display: block;
+  cursor: pointer;
+}
+
+.product__info {
+  padding-top: 5px;
+}
+
+.product__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-right: 40px;
+  margin-bottom: 13px;
+
+  a {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  & a:hover,
+  & a:focus,
+  & a:active {
+    opacity: 0.3;
+  }
+}
+
+.product__description {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product__description-item {
+  display: flex;
+  justify-content: space-between;
+  font-family: @secondary-font;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product__order {
+  background-color: @green;
+  color: @white;
+  font-family: @main-font;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  padding: 10px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: @darkdreen;
+  }
+
+  &:active {
+    background-color: @darkdreen;
+    color: @lightgreen;
+  }
+}
+
+.product-more {
+  padding-top: 78px;
+  position: relative;
+
+  &::before {
+    content: url("../img/icon-plus-mobile.svg");
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    margin-left: -15px;
+    opacity: 0.3;
+  }
+}
+
+.product-more__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.product-more__description {
+  font-family: @secondary-font;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 8px 0 0;
+}
+
+.product-more__link {
+  background-color: @lightgrey;
+  color: @darkgrey;
+  font-family: @main-font;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  transition: 0.3s;
+
+  &:hover,
+  &:active {
+    background-color: #ebebeb;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .product__image {
+    width: 324px;
+
+    &--small {
+      height: 172px;
+    }
+
+    &--big {
+      height: 208px;
+    }
+
+    &:hover {
+      transform: translateY(4px) scale(1.05);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    &:active {
+      transform: scale(0.9);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  .product-more {
+    &::before {
+      content: url("../img/icon-plus.svg");
+      width: 60px;
+      height: 60px;
+      top: 34px;
+      left: 112px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product__image {
+    width: 245px;
+  }
+
+  .product__image--small {
+    height: 174px;
+  }
+
+  .product__image--big {
+    height: 208px;
+  }
+}

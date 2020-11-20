@@ -13,6 +13,8 @@
 }
 
 .header__logo {
+  transition: 0.3s;
+
   &:hover {
     opacity: 0.7;
   }
@@ -109,21 +111,20 @@
 .header__item {
   border-top: 1px solid @grey;
   text-align: center;
+
+  a {
+    display: block;
+    padding: 22px;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  & a:hover,
+  & a:active {
+    opacity: 0.5;
+  }
 }
 
-.header__item a {
-  display: block;
-  padding: 22px;
-  text-align: center;
-}
-
-.header__item a:hover {
-  opacity: 0.5;
-}
-
-.header__item a:active {
-  opacity: 0.3;
-}
 
 @media (min-width: @tablet-width) {
   .header {

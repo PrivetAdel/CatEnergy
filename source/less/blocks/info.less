@@ -11,6 +11,14 @@
 
 .info__logotype-link {
   display: inline-flex;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.7;
+  }
 }
 
 .info__social {
@@ -37,6 +45,18 @@
   justify-content: center;
   width: 50px;
   height: 50px;
+  fill: @darkgrey;
+  transition: 0.3s;
+
+  &:hover .info__icon,
+  &:focus .info__icon,
+  &:active .info__icon {
+    fill: @green;
+  }
+}
+
+.info__icon {
+  transition: 0.3s;
 }
 
 .info__copyright {
@@ -51,10 +71,18 @@
   font-size: 16px;
   line-height: 16px;
   color: @darkgrey;
+
+  &:hover .info__copyright-icon,
+  &:focus .info__copyright-icon,
+  &:active .info__copyright-icon {
+    fill: @green;
+  }
 }
 
 .info__copyright-icon {
   margin-right: -5px;
+  fill: @darkgrey;
+  transition: 0.3s;
 }
 
 @media (min-width: @tablet-width) {
