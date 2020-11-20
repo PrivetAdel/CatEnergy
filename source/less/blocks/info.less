@@ -44,7 +44,7 @@
 }
 
 .info__copyright-link {
-  font-family: "Arial", sans-serif;
+  font-family: @secondary-font;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,5 +104,11 @@
 
   .info__copyright-icon {
     margin-left: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info {
+    padding: 40px 110px;
   }
 }

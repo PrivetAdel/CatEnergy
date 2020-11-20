@@ -15,7 +15,7 @@
 }
 
 .example__description {
-  font-family: "Arial", sans-serif;
+  font-family: @secondary-font;
   margin: 23px 0;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .example__label {
-  font-family: "Arial", sans-serif;
+  font-family: @secondary-font;
   font-size: 12px;
   line-height: 12px;
   background-color: @lightgrey;
@@ -115,29 +115,67 @@
 }
 
 @media (min-width: @desktop-width) {
-  .example__wrapper {
-    width: 1220px;
-    margin: 0 auto;
+  .example {
+    display: flex;
     position: relative;
+    padding: 0 0 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: @lightgrey;
+      top: 196px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: #eaeaea;
+      top: 196px;
+      bottom: 0;
+      right: 0;
+      width: calc(55% / 2);
+    }
+  }
+
+  .example__wrapper {
+    z-index: 1;
+    width: 45%;
+    padding: 60px 110px 45px;
   }
 
   .example__title {
-    margin: 0 0 0 1px;
-    padding: 0;
-    align-self: flex-start;
+    margin-bottom: 145px;
   }
 
   .example__description {
-    margin: 146px 0 0 1px;
-    width: 439px;
-    padding: 0;
-    min-height: 97px;
-    align-self: flex-start;
+    margin-bottom: 65px;
   }
 
-  .example__results {
-    width: 1220px;
-    margin: 68px 0 0;
-    align-self: flex-start;
+  .example__statistic {
+    padding-right: 60px;
+  }
+
+  .example__item {
+    margin: 0;
+    width: calc(50% - 16px);
+  }
+
+  .example__label {
+    background-color: @lightgrey;
+  }
+
+  .example__cost {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 38px;
+
+    span + span {
+      margin-left: 50px;
+    }
   }
 }

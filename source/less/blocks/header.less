@@ -1,5 +1,5 @@
 .header {
-  font-family: "Oswald","Arial",sans-serif;
+  font-family: @main-font;
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
@@ -190,56 +190,26 @@
 }
 
 @media (min-width: @desktop-width) {
-
+  .header {
+    font-size: 20px;
+  }
 
   .header__nav {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .header__wrapper {
-    min-width: 204px;
-    padding: 24px 0 70px;
-    margin: 0;
-  }
-
-  .header__logo {
-    padding: 12px 0;
-    width: 202px;
+    padding: 30px 80px;
   }
 
   .header__logo img {
-    margin: -13px 0 0;
     width: 203px;
     height: 60px;
   }
 
-  .header__list,
-  .header__nav--nojs .header__list {
-    width: 479px;
-    padding: 45px 0 0;
-  }
-
   .header__item {
-    border: none;
-    padding: 0;
-  }
+    &--active::after {
+      background-color: @white;
+    }
 
-  .header__item:first-child {
-    margin-right: 31px;
-  }
-
-  .header__item a {
-    color: @white;
-  }
-
-  .header__item::after {
-    left: 2px;
-    background: @green;
-  }
-
-  .header__item::after {
-    left: 2px;
-    background: @white;
+    a {
+      color: @white;
+    }
   }
 }

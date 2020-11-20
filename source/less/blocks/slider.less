@@ -20,17 +20,17 @@
   width: 100%;
   overflow: hidden;
   transition: 0.4s ease-out;
+
+  &--after {
+    display: flex;
+    justify-content: flex-end;
+    width: 0;
+    right: 0;
+  }
 }
 
-.slider__image img {
+.slider__pic {
   user-select: none;
-}
-
-.slider__image--after {
-  display: flex;
-  justify-content: flex-end;
-  width: 0;
-  right: 0;
 }
 
 .slider__toggles {
@@ -49,14 +49,14 @@
   border-bottom: 1px solid @lightgrey;
   user-select: none;
   transition: 0.5s;
-}
 
-.slider__toggle:hover {
-  border-bottom: 1px solid @grey;
-}
+  &:hover {
+    border-bottom: 1px solid @grey;
+  }
 
-.slider__toggle:active {
-  border-bottom: 1px solid @lightgrey;
+  &:active {
+    border-bottom: 1px solid @lightgrey;
+  }
 }
 
 .slider__scale {
@@ -109,28 +109,27 @@
   .slider {
     position: relative;
     padding-bottom: 55px;
-  }
 
-  .slider::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 460px;
-    background-color: @lightgrey;
-    opacity: 0.7;
-  }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 460px;
+      background-color: @lightgrey;
+    }
 
-  .slider::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 50%;
-    height: 460px;
-    background-color: @lightgrey;
-    z-index: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      height: 460px;
+      background-color: #eaeaea;
+      z-index: 0;
+    }
   }
 
   .slider__images {
@@ -144,15 +143,15 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    &--after {
+      align-items: flex-end;
+    }
   }
 
-  .slider__image img {
+  .slider__pic {
     width: 680px;
     height: auto;
-  }
-
-  .slider__image--after {
-    align-items: flex-end;
   }
 
   .slider__toggles {
@@ -196,9 +195,35 @@
 }
 
 @media (min-width: @desktop-width) {
-  .slider__wrapper {
-    position: absolute;
-    bottom: 0;
-    right: -52px;
+  .slider {
+    width: 55%;
+    padding: 0 33px;
+    margin-top: auto;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .slider__images {
+    margin: 0 auto;
+  }
+
+  .slider__pic {
+    &--before {
+      margin: 9px 0 0 -21px;
+    }
+
+    &--after {
+      margin: 0 20px -3px 0;
+    }
+  }
+
+  .slider__toggles {
+    margin: 45px auto;
   }
 }

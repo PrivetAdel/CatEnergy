@@ -18,7 +18,7 @@
 }
 
 .contacts__address {
-  font-family: "Arial", sans-serif;
+  font-family: @secondary-font;
   line-height: 20px;
   margin: 0;
   margin-right: 5px;
@@ -31,6 +31,7 @@
   background-image: url("../img/bg-map-mobile@1x.webp");
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: @grey;
 }
 
 @media (min-width: @tablet-width) {
@@ -63,33 +64,27 @@
 }
 
 @media (min-width: @desktop-width) {
-  .address__wrapper {
-    width: 1300px;
-    display: flex;
-    margin: 0 auto;
-    padding: 0;
+  .contacts {
     position: relative;
   }
 
-  .address__align {
-    width: 427px;
-    height: 200px;
-    background-color: @white;
+  .contacts__wrapper {
     position: absolute;
-    left: 40px;
-    padding: 0 75px;
+    top: 95px;
+    left: 111px;
+    min-height: 200px;
+    width: 570px;
+    background-color: @white;
+    padding: 64px 90px 59px 75px;
+    z-index: 1;
   }
 
-  .address__slogan {
-    padding: 64px 0 20px;
-  }
-
-  .address__adds {
-    margin: 62px 21px 20px 0;
+  .contacts__address {
     text-align: left;
   }
 
-  .address__city {
-    margin: 122px -126px 0 0;
+  .contacts__map {
+    height: 400px;
+    background-image: url("../img/bg-map-desktop@1x.webp");
   }
 }
