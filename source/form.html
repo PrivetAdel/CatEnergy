@@ -46,71 +46,101 @@
     </header>
 
     <main class="page-form">
-      <div class="page-form__wrapper">
+      <div class="page-form__title">
         <h1 class="visually-hidden">Интернет-магазин "Cat Energy" - питание   для котов</h1>
-        <h2 class="page-form__description">Подбор программы</h2>
-        <p class="page-form__slogan">Заполните анкету и мы подберем  программу питания для вашего кота</p>
+        <h2>Подбор программы</h2>
+        <p class="page-form__description">Заполните анкету и мы подберем  программу питания для вашего кота</p>
       </div>
-      <form class="page-form__form form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form__data data">
-          <div class="data__wrapper">
-            <div class="data__general general">
-              <p><label for="name">Имя:*<input id="name" type="text" placeholder="Барсик" required=""></label>
-              </p>
-              <p><label for="weight">Вес (кг):*<input id="weight" type="number" placeholder="7" required=""></label>
-              </p>
-              <p><label for="age">Возраст (лет):<input class="age" id="age" type="number" placeholder="7"></label>
-              </p>
+
+      <form class="page-form__form" action="https://echo.htmlacademy.ru" method="post">
+
+        <fieldset class="page-form__fieldset">
+          <div class="page-form__cat-info">
+            <div class="page-form__row">
+              <label for="name">Имя:*</label>
+              <input id="name" type="text" placeholder="Барсик" required="">
             </div>
-            <div class="data__choice choice">
-              <p><input class="choice-radio" id="weight-loss" type="radio" name="question" value="" checked=""><label for="weight-loss">Похудение</label></p>
-              <p><input class="choice-radio" id="weight-gain" type="radio" name="question" value=""><label for="weight-gain">Набор массы</label></p>
-              <p><input class="choice-radio" id="advice" type="radio" name="question" value=""><label for="advice">Не знаю (нужен ваш совет)</label></p>
+            <div class="page-form__row">
+              <label for="weight">Вес&nbsp;(кг):*</label>
+              <input id="weight" type="number" placeholder="7" required="">
+            </div>
+            <div class="page-form__row">
+              <label for="age">Возраст&nbsp;(лет):</label>
+              <input class="age" id="age" type="number" placeholder="7">
+            </div>
+          </div>
+
+          <div class="page-form__program">
+            <div class="page-form__radio-row">
+              <input class="page-form__radio-input" id="weight-loss" type="radio" name="program" checked="">
+              <label for="weight-loss" tabindex="8">Похудение</label>
+            </div>
+            <div class="page-form__radio-row">
+              <input class="page-form__radio-input" id="weight-gain" type="radio" name="program">
+              <label for="weight-gain" tabindex="9">Набор массы</label>
+            </div>
+            <div class="page-form__radio-row">
+              <input class="page-form__radio-input" id="advice" type="radio" name="program">
+              <label for="advice" tabindex="10">Не знаю (нужен ваш совет)</label>
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__contacts contacts">
-          <legend>Контактные данные (владельца кота)</legend>
-          <div class="contacts__wrapper">
-            <p>
-              <label class="contacts__mail" for="mail">E-mail:*<input id="mail" type="email" placeholder="kuklachev@gmail.com" required=""><svg class="contacts__icon" width="18" height="15"><use xlink:href="#icon-mail"></use></svg></label>
-            </p>
-            <p>
-              <label class="contacts__phone" for="phone">Телефон:*<input id="phone" type="tel" name="tel" placeholder="8 (960) 900-60-90" required=""><svg class="contacts__icon" width="20" height="20"><use xlink:href="#icon-phone"></use></svg></label>
-            </p>
+
+        <fieldset class="page-form__fieldset">
+          <legend>Контактные&nbsp;данные</legend>
+          <span class="page-form__subtitle">(владельца кота)</span>
+          <div class="page-form__owner-info">
+            <div class="page-form__row">
+              <label for="mail">E-mail:*</label>
+              <input id="mail" type="email" placeholder="kuklachev@gmail.com" required="">
+              <svg class="page-form__icon" width="18" height="15">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </div>
+            <div class="page-form__row">
+              <label for="phone">Телефон:*</label>
+              <input id="phone" type="tel" name="tel" placeholder="8 (960) 900-60-90" required="">
+              <svg class="page-form__icon" width="20" height="20">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
+            </div>
           </div>
         </fieldset>
-        <fieldset class="form__comment comment">
+
+        <fieldset class="page-form__fieldset comment">
           <legend>Комментарий</legend>
-          <div class="comment__wrapper">
-            <textarea name="comment" rows="7" cols="41" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <div class="page-form__comment">
+            <textarea name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
-        <fieldset class="form__extra extra">
+
+        <fieldset class="page-form__fieldset">
           <legend>Дополнительно</legend>
-          <div class="extra__wrapper">
-            <p>
-              <input class="visually-hidden" id="10" type="checkbox" checked>
+          <div class="page-form__extra">
+            <div class="page-form__checkbox-row">
+              <input class="page-form__checkbox-input" id="10" type="checkbox" checked>
               <label for="10">Сахарозаменитель</label>
-            </p>
-            <p>
-              <input class="visually-hidden" id="11" type="checkbox">
+            </div>
+            <div class="page-form__checkbox-row">
+              <input class="page-form__checkbox-input" id="11" type="checkbox">
               <label for="11">Питьевая вода</label>
-            </p>
-            <p>
-              <input class="visually-hidden" id="12" type="checkbox">
+            </div>
+            <div class="page-form__checkbox-row">
+              <input class="page-form__checkbox-input" id="12" type="checkbox">
               <label for="12">Молоко</label>
-            </p>
-            <p>
-              <input class="visually-hidden" id="13" type="checkbox">
+            </div>
+            <div class="page-form__checkbox-row">
+              <input class="page-form__checkbox-input" id="13" type="checkbox">
               <label for="13">Витамины</label>
-            </p>
+            </div>
           </div>
         </fieldset>
-        <div class="form__wrapper">
-          <input class="form__button button" type="submit" value="Отправить заявку">
+
+        <div class="page-form__submit">
+          <input type="submit" value="Отправить заявку">
           <p>* — Обязательные поля</p>
         </div>
+
       </form>
     </main>
 
