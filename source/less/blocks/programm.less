@@ -72,25 +72,27 @@
   color: @black;
   text-transform: uppercase;
   position: relative;
+  transition: 0.3s;
 
   &::after {
     content: "";
     position: absolute;
-    transition: all 0.2s ease-out;
+    transition: 0.3s ease-out;
     background-image: url("../../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     width: 32px;
     height: 11px;
-    top: 16px;
+    top: 13px;
     right: -10px;
+    transform-origin: left;
   }
 
   &:hover::after {
-    background-image: url("../../img/icon-right-arrow-verylong.svg");
+    transform: scaleX(1.7);
   }
 
   &:hover {
-    color: @green;
+    opacity: 0.5;
   }
 
   &:active {
@@ -105,7 +107,7 @@
   }
 
   .programm__item {
-    padding: 72px 275px 58px 54px;
+    padding: 75px 275px 52px 54px;
     max-width: 710px;
     min-height: 372px;
     margin: 0 auto;
@@ -119,19 +121,19 @@
       width: 200px;
       height: 200px;
       left: 447px;
-      top: 90px;
+      top: 92px;
     }
 
     &--slim::after {
       width: 139px;
       left: 477px;
-      top: 78px;
+      top: 80px;
     }
 
     &--pro::after {
       width: 268px;
       left: 412px;
-      top: 133px;
+      top: 134px;
     }
   }
 
@@ -145,14 +147,14 @@
     width: 100%;
     font-size: 36px;
     line-height: 39px;
-    margin: 0 0 20px;
+    margin: 0 0 24px;
   }
 
   .programm__description {
     text-align: left;
     font-size: 16px;
     line-height: 24px;
-    padding-bottom: 42px;
+    padding-bottom: 46px;
     border-bottom: none;
     margin: 0;
   }
@@ -167,7 +169,7 @@
 
 @media (min-width: @desktop-width) {
   .programm {
-    padding: 0 110px;
+    padding: 0 40px;
   }
 
   .programm__list {

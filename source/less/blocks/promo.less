@@ -46,8 +46,10 @@
 .promo__picture {
   width: 280px;
   height: 270px;
+  display: block;
   animation-name: fadeInLeft;
   animation-duration: 1.5s;
+  z-index: -1;
 }
 
 .promo__choose-program {
@@ -123,6 +125,7 @@
     left: 50%;
     width: 50%;
     background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position-x: right;
     height: 696px;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -134,7 +137,8 @@
   }
 
   .promo__wrapper {
-    padding: 43px 92px;
+    padding: 43px 23px;
+    max-width: 50%;
   }
 
   .promo__title,
@@ -145,14 +149,14 @@
   .promo__picture {
     position: absolute;
     top: -27px;
-    right: 328px;
+    right: -392px;
     width: 552px;
     height: 499px;
   }
 
   .promo__choose-program {
     top: 286px;
-    left: 191px;
+    left: 120px;
   }
 }
 

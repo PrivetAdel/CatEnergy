@@ -196,7 +196,7 @@
   }
 
   .header__nav {
-    padding: 30px 80px;
+    padding: 30px 10px;
   }
 
   .header__logo img {
@@ -204,13 +204,15 @@
     height: 60px;
   }
 
-  .header__item {
-    &--active::after {
-      background-color: @white;
-    }
+  .header__list--index {
+    .header__item {
+      &--active::after {
+        background-color: @white;
+      }
 
-    a {
-      color: @white;
+      a {
+        color: @white;
+      }
     }
   }
 }

@@ -99,7 +99,7 @@
   .example__label {
     font-size: 14px;
     background-color: @white;
-    margin: 0 10px;
+    margin: 0 5px;
     padding: 0 3px;
     transform: translateY(-10px);
   }
@@ -137,14 +137,14 @@
       top: 196px;
       bottom: 0;
       right: 0;
-      width: calc(55% / 2);
+      width: 25%;
     }
   }
 
   .example__wrapper {
     z-index: 1;
-    width: 45%;
-    padding: 60px 110px 45px;
+    width: calc(50% - 40px);
+    padding: 60px 135px 45px 40px;
   }
 
   .example__title {
@@ -156,7 +156,7 @@
   }
 
   .example__statistic {
-    padding-right: 60px;
+    padding-right: 70px;
   }
 
   .example__item {
@@ -172,10 +172,11 @@
     width: 100%;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 38px;
+    margin: 38px 0 0;
+
 
     span + span {
-      margin-left: 50px;
+      margin-left: 20px;
     }
   }
 }
