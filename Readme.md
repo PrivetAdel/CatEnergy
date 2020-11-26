@@ -1,5 +1,5 @@
 # Личный проект [«Кэт энерджи»](https://privetadel.github.io/CatEnergy/) 
-на курсе HTML Academy ("HTML и CSS. Адаптивная вёрстка и автоматизация, уровень 2")[https://htmlacademy.ru/intensive/adaptive]
+на курсе HTML Academy ["HTML и CSS. Адаптивная вёрстка и автоматизация, уровень 2"](https://htmlacademy.ru/intensive/adaptive)
 
 - Flex-box, Grid
 - Gulp & Less
