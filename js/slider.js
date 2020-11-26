@@ -1,11 +1,11 @@
 const TABLET_WIDTH = 768;
-const slider = document.querySelector(`.slider__wrapper`);
+const slider = document.querySelector(`.slider`);
 const scale = slider.querySelector(`.slider__scale`);
 const grip = scale.querySelector(`.slider__grip`);
 const before = slider.querySelector(`.slider__image--before`);
 const after = slider.querySelector(`.slider__image--after`);
-const btnBefore = slider.querySelector(`.before`);
-const btnAfter = slider.querySelector(`.after`);
+const btnBefore = slider.querySelector(`.slider__toggle--before`);
+const btnAfter = slider.querySelector(`.slider__toggle--after`);
 let scaleWidth;
 let gripWidth;
 
