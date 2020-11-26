@@ -1,0 +1,151 @@
+.block-cat__info {
+  padding: 0 19px;
+  margin-bottom: 23px;
+}
+
+.block-cat__program {
+  border: 1px solid @border-grey;
+  padding: 13px 18px;
+  margin-bottom: 17px;
+}
+
+.block-cat__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+  position: relative;
+
+  label {
+    margin-right: 13px;
+  }
+
+  input {
+    padding: 13px 15px;
+    margin: 0;
+    flex-grow: 1;
+    border: 1px solid @border-grey;
+    border-radius: 0;
+
+    &:hover {
+      border-color: @grey;
+    }
+  }
+}
+
+.block-cat__radio-row {
+  padding: 12px 0 12px 46px;
+  position: relative;
+
+  label {
+    transition: 0.3s;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: 1px solid @border-grey;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      top: 5px;
+      left: 0;
+      transition: 0.3s;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.block-cat__radio-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  &:focus + label::before {
+    border-color: @black;
+  }
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    background-color: @green;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    top: 16px;
+    left: 11px;
+    transition: 0.3s;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .block-cat__row {
+    margin-bottom: 20px;
+
+    label {
+      margin-right: 20px;
+    }
+
+    input {
+      padding: 10px 15px;
+    }
+  }
+
+  .block-cat__wrapper {
+    padding: 0 67px 0 70px;
+  }
+
+  .block-cat__info {
+    padding: 0;
+    margin-bottom: 72px;
+  }
+
+  .block-cat__program {
+    margin: 0 0 64px;
+    padding: 22px 27px 12px;
+  }
+
+  .block-cat__radio-row {
+    padding: 12px 0 12px 59px;
+    margin-bottom: 7px;
+
+    label::before {
+      width: 40px;
+      height: 40px;
+      top: 1px;
+    }
+  }
+
+  .block-cat__radio-input:checked + label::after {
+    width: 18px;
+    height: 18px;
+    top: 13px;
+    left: 12px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .block-cat__wrapper {
+    padding: 0 40px 58px;
+    display: flex;
+  }
+
+  .block-cat__info {
+    padding: 0;
+    width: calc(50% - 40px);
+    margin: 0 80px 0 0;
+  }
+
+  .block-cat__program {
+    margin: 0;
+    width: calc(50% - 40px);
+  }
+
+  .block-cat__row {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
