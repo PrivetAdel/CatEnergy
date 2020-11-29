@@ -4,6 +4,7 @@
 - Flex-box, Grid
 - Gulp & Less
 - Adaptive: 320px, 768px, 1300px
+- Pixel Perfect, Mobile First
 - BEM 
 - svg-sprite, WebP
 - Chrome, Opera, Firefox, Safari, Edge
